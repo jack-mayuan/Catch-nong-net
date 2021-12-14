@@ -1,0 +1,32 @@
+/* pages/my/myHonesty.wxss */
+.container{
+  min-height: 100vh;
+  background-color: #f5f7f6;
+}
+.star_box{
+  /* margin-top: ; */
+  padding: 106rpx 78rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.star_box image{
+  width: 86rpx;
+  height: 82rpx;
+}
+.integrity{
+  height: 304rpx;
+  margin-top: 68rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.integrity image{
+  width: 187rpx;
+  height: 235rpx;
+}
+.integrity view{
+  font-size: 37rpx;
+  line-height: 37rpx;
+  color: #4a4c4b;
+}

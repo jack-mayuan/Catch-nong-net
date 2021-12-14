@@ -1,0 +1,17 @@
+<!--components/menu-select/index.wxml-->
+<view class="role_box">
+  <view class="role {{isSelect? 'border_bottom': ''}}" bindtap="selectRole">
+    <view class="placeHolder {{currentIndex1!==-1? 'selected': ''}}">{{value}}</view>
+    <image src="/images/down_gray2.png" class="{{isSelect? 'up': ''}}"></image>
+  </view>
+  <view class="role_box_outer">
+    <view class="role_item_box {{isSelect? 'display': 'none'}}">
+      <view class="role_item" wx:for="{{option}}" wx:key="index" bindtap="clickRoleItem" data-index="{{index}}"> 
+        <view>{{item.text}}</view>
+        <image src="/images/correct.png" wx:if="{{currentIndex1 === index}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="{{isSelect? 'mask': ''}}" bindtap="clickMask">
+</view>

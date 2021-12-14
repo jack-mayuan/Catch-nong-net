@@ -1,0 +1,153 @@
+/* pages/authorization/index.wxss */
+.container{
+  height: 100vh;
+  background-color: #f5f7f6;
+}
+.container .image{
+  width: 41rpx;
+}
+.sq_box{
+  padding: 0 40rpx;
+}
+.sq_box .sq_box_inner{
+  width: 670rpx;
+  height: 181rpx;
+  border-bottom: 1rpx solid #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sq_box .sq_box_inner .button{
+  width: 155rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #dcdcdc;
+  color: #666666;
+  line-height: 58rpx;
+  text-align: center;
+  font-size: 26rpx;
+  border-radius: 6rpx;
+  background-color: #fff;
+}
+.sq_box .sq_box_inner .right{
+  margin-right: 27rpx;
+}
+/* 按钮选中的样式 */
+.sq_box .sq_box_inner .button_hover{
+  border: none;
+  background-color: #48d788;
+  color: white;
+}
+/* 我的授权content样式 */
+.mysqcontent{
+  padding: 0 47rpx;
+}
+.mysqcontent .mysq_item{
+  height: 188rpx;
+  display: flex;
+  font-size: 26rpx;
+  margin-top: 41rpx;
+}
+.mysqcontent .mysq_item .item_left_pic{
+  width: 290rpx;
+  height: 178rpx;
+  margin-top: 10rpx;
+}
+
+.mysqcontent .mysq_item .mysq_info_box{
+  padding-left: 29rpx;
+}
+.mysqcontent .mysq_item .mysq_info_box .company{
+  color: #000201;
+  line-height: 46rpx;
+}
+.mysqcontent .mysq_item .mysq_info_box .area{
+  color: #575757;
+  margin-top: 10rpx;
+  line-height: 26rpx;
+}
+.mysqcontent .mysq_item .mysq_info_box .view_sqbook_box{
+  display: flex;
+  margin-top: 18rpx;
+  align-items: center;
+  height: 46rpx;
+  padding-right: 20rpx;
+  justify-content: space-between;
+}
+.mysqcontent .mysq_item .mysq_info_box .view_sqbook_box .view_sqbook{
+  display: flex;
+  height: 26rpx;
+  align-items: center;
+}
+.mysqcontent .mysq_item .mysq_info_box .view_sqbook_box .cancle{
+  /* width: ; */
+  /* height: 36rpx;
+  width: 36rpx; */
+  color: #707070;
+}
+.mysqcontent .mysq_item .mysq_info_box .view_sqbook_box image{
+  width: 31rpx;
+  height: 22rpx;
+}
+.mysqcontent .mysq_item .mysq_info_box .view_sqbook_box .view_sqbook{
+  color: #e2af00;
+  line-height: 26rpx;
+  padding-left: 14rpx;
+}
+/* 我要授权content-------------start */
+.tosq_search_box{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 0 35rpx;
+  margin-top: 45rpx;
+}
+.tosqcontent{
+  padding: 0 47rpx;
+}
+.tosqcontent .mysq_item{
+  height: 188rpx;
+  display: flex;
+  font-size: 26rpx;
+  /* margin-top: 41rpx; */
+}
+.tosqcontent .mysq_item .item_left_pic{
+  width: 290rpx;
+  height: 178rpx; 
+  margin-top: 10rpx;
+}
+
+.tosqcontent .mysq_item .mysq_info_box{
+  padding-left: 28rpx;
+  flex: 1;
+}
+.tosqcontent .mysq_item .mysq_info_box .company{
+  color: #000201;
+  line-height: 46rpx;
+}
+.tosqcontent .mysq_item .mysq_info_box .area{
+  color: #575757;
+  margin-top: 50rpx;
+  line-height: 26rpx;
+}
+/* 单选框的样式 */
+.tosqcontent .demo-radio{
+  margin-top: 41rpx;
+}
+/* 我要授权content-------------end */
+
+
+/* 确定授权按钮 */
+.to_button_box{
+  padding-top: 100rpx;
+}
+/* 下方加载样式 */
+.loading{
+  text-align: center;
+  padding: 10rpx 0;
+}
+.hint{
+  text-align: center;
+  padding: 0 0 10rpx;
+  font-size: 26rpx;
+  color: #707070;
+}

@@ -1,0 +1,132 @@
+<!--pages/search/search.wxml-->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <view class="search_box">
+    <search searchValue="{{searchValue}}" fuzzyResultArr="{{fuzzyResultArr}}" bindinput="input" bindsearch="search"
+      bindfuzzyResultSearch="fuzzyResultSearch" bindclearFuzzyArr="clearFuzzyArr" />
+  </view>
+  <!-- 按阅读量，筛选 -->
+  <view class="sort_box">
+    <view class="sort" hover-class="sort_click" hover-start-time="{{0}}" hover-stay-time="{{100}}"
+      bindtap="sortReadQuantity">
+      <view>
+        按阅读量排序
+        <image wx:if="{{readingAmount === true}}" src="/images/bothway2.png" class="pic_read"></image>
+        <image wx:else src="/images/bothway.png" class="pic_read"></image>
+      </view>
+    </view>
+    <view class="filtrate_btn" hover-class="filtrate_hove" hover-start-time="{{0}}" hover-stay-time="{{100}}"
+      bindtap="choose">
+      筛选
+      <image wx:if="{{choseSwitch}}" src="/images/up_white.png" class="chose_pic" />
+      <image wx:else src="/images/down_white.png" class="chose_pic" />
+    </view>
+  </view>
+
+  <!-- 按地区，按抗性 -->
+  <view wx:if="{{choseSwitch}}" class="kangxign_diqu">
+    <view class="region {{choseRegOrRes === 0? 'chose_reg_res': ''}} {{region.name?'chose_reg_res': ''}}"
+      bindtap="becomeReg">
+      {{region.name||'按地区'}}
+      <image wx:if="{{choseRegOrRes === 0}}" src="/images/up_green.png" class="pic"></image>
+      <image wx:else src="/images/down_gray.png" class="pic"></image>
+    </view>
+    <view class="resistance {{choseRegOrRes === 1? 'chose_reg_res': ''}} {{choseResistanceStr? 'chose_reg_res': ''}}"
+      bindtap="becomeRes">
+      <view class="ankangxing">{{choseResistanceStr||'按抗性'}}</view>
+      <image wx:if="{{choseRegOrRes === 1}}" src="/images/up_green.png" class="pic"></image>
+      <image wx:else src="/images/down_gray.png" class="pic"></image>
+    </view>
+  </view>
+  <!-- 按钮盒子， 种子公司，宣传展示等等-->
+  <view class="four_button">
+    <!-- 选择抗性的组件，按抗性时展开 -->
+    <view class="press_resistance" wx:if="{{choseResistance}}">
+      <view class="top_box">
+        <view class="top_left_box">
+          <!-- <view class="fruits" hover-class="fruits_click" hover-start-time="{{0}}"
+          hover-stay-time="{{100}}">西红柿</view> -->
+          <view class="fruits {{oneNavCurIndex === index? 'fruits_active': ''}}" hover-class="fruits_click"
+            hover-start-time="{{0}}" hover-stay-time="{{100}}" wx:for="{{oneNavigation}}" wx:key="key"
+            bindtap="clickOneNav" data-index="{{index}}">{{item.name}}</view>
+        </view>
+        <view class="top_right_box">
+          <view class="variety" wx:for="{{twoNavgation}}" wx:key="key">
+            <view class="variety_name">{{item.title}}</view>
+            <view class="res_box">
+              <view class="res {{(subindex+1)%3 === 0? 'res2': ''}} {{subItem.check? 'active': ''}}"
+                wx:for="{{item.resistanceArr}}" wx:for-item="subItem" wx:for-index="subindex" wx:key="id"
+                data-subindex="{{subindex}}" data-index="{{index}}" bindtap="clickResistance">{{subItem.name}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom_box">
+        <view class="bottom_left_box" bindtap="reset" hover-class="click_hover" hover-start-time="{{0}}"
+          hover-stay-time="{{100}}">重置</view>
+        <view class="bottom_right_box" bindtap="sure" hover-class="click_hover" hover-start-time="{{0}}"
+          hover-stay-time="{{100}}">确定</view>
+      </view>
+    </view>
+
+    <!-- 种子公司，苗场，代办，供应链 -->
+    <view class="button_box">
+      <button wx:for="{{buttonList}}" wx:key="*this" data-index="{{index}}"
+        class="button {{currentIndex === index? 'active': ''}}" bindtap="onClick">{{item}}
+        <block wx:if="{{ index === 3 }}">
+          <image src="/images/xiangshang.png" wx:if="{{isOpen}}"></image>
+          <image src="/images/xiangxia1.png" wx:else></image>
+        </block>
+      </button>
+      <view class="options {{isOpen?'open_option':''}}">
+        <van-button plain
+          custom-style="height: 50rpx; color: gray; width: 154rpx;font-size: 24rpx;display: block;border-top: none;"
+          wx:for="{{buttonArr}}" wx:key="*this" bindtap="checkone" data-value2="{{item}}">{{item}}</van-button>
+      </view>
+    </view>
+
+    <!-- 宣传展示，图文信息，行业报告 -->
+    <view class="button_box down_border">
+      <button wx:for="{{buttonList2}}" wx:key="*this" data-index="{{index}}"
+        class="button {{currentIndex2 === index? 'active': ''}}" bindtap="dispType">{{item}}
+      </button>
+    </view>
+  </view>
+
+  <!-- 列表展示部分 -->
+  <view class="list">
+    <block wx:if="{{currentIndex2 === 0}}">
+      <block wx:for="{{dataList}}" wx:key="index">
+        <video-item wx:if="{{currentIsOkIndex===0}}"  item="{{item}}" bindunfold="unfold" index="{{index}}"
+          bindpause="pause" bindbindplay="bindplay"></video-item>
+      </block>
+    </block>
+    <block wx:if="{{currentIndex2 === 1}}">
+      <block wx:for="{{dataList}}" wx:key="index">
+        <picture-item wx:if="{{currentIsOkIndex===1}}" item="{{item}}" fatherindex="{{index}}"
+          bindpicunfold="picunfold"></picture-item>
+      </block>
+    </block>
+    <block wx:if="{{currentIndex2 === 2}}">
+      <block wx:for="{{dataList}}" wx:key="index">
+        <article-item wx:if="{{currentIsOkIndex===2}}" item="{{item}}"></article-item>
+      </block>
+    </block>
+  </view>
+  <!-- 底部加载文字提示 -->
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <view class="block" />
+
+</scroll-view>
+<!-- 选择地区的组件 -->
+<van-popup show="{{ choseRegion }}" position="bottom" custom-style="height: 350px" bind:close="hideBottom">
+  <van-area value="{{ value }}" loading="{{ loading }}" area-list="{{ areaList }}" bind:change="areaChange"
+    bind:confirm="areaConfirm" bind:cancel="areaCancel" />
+</van-popup>
+<van-toast id="van-toast" />

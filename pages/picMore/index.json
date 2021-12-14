@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "图文信息",
+  "usingComponents": {
+    "search": "../../components/search/index"
+  }
+}

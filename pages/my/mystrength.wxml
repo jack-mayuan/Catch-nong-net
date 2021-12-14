@@ -1,0 +1,11 @@
+<!--pages/my/mystrength.wxml-->
+<view class="container">
+  <!-- <title-bar title="我的实力">
+    <image slot="before" src="/images/sltop.png"></image>
+  </title-bar> -->
+  <view class="grade">90</view>
+  <view class="box">
+    <image src="/images/jiangbei.png"></image>
+    <view class="text">我的实力</view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* pages/ceshi3/index.wxss */
+.list {
+  padding: 7rpx 22rpx 0;
+}

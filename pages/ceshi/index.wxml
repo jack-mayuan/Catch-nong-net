@@ -1,0 +1,21 @@
+<!--pages/ceshi/index.wxml-->
+
+<view class="pic_box">
+  <view class="pic_item" wx:for="a" wx:key="index">
+    <view class="phote_box">
+      <!-- 左侧头像栏 -->
+      <image src="/images/icon.jpg" class="photo"></image>
+    </view>
+    <view class="pic_text_box">
+      <view class="nickname">昵称</view>
+      <view class="text">内容前端上传文件的几种方式
+        出于安全考量,操作系统分配给浏览器的权限较低,而单个网页所拥有对用户电脑操作的权限就更低了,这是为了防止因用户的操作不当导致恶意网页随意增删改动用户本地的文件
+      </view>
+      <view class="pic_box_inner">
+        <view wx:for="{{imageArray}}" wx:key="id" class="pic {{(index+1)%3 === 0?'pic_last_collom': ''}}">
+          <image src="{{item.url}}" class="picture" bindtap="onPreviewImage" data-index="{{ index }}"/>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

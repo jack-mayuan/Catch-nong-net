@@ -1,0 +1,58 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+  <!-- <view class="toPublic">
+    <image src="/images/fabu2.png" class="image"></image>
+    <view>我要发布</view>
+  </view> -->
+  <view class="content">
+    <view class="title">
+      <van-field model:value="{{ titleValue }}" label-class="place_holder" placeholder="输入标题" border="{{ false }}" />
+    </view>
+    <!-- 选择角色 -->
+    <menu-select value="{{roleValue}}" option="{{roleOption}}" bind:change="changeRole" />
+    <!-- 所属分类 -->
+    <menu-select value="{{typeValue}}" option="{{typeOption}}" bind:change="changeType" />
+
+    <!-- 发布内容 -->
+    <view class="public_content">发布内容:</view>
+    <textarea model:value="{{textareaValue}}" placeholder="要发布的内容和茬口..." class="fabuneirong" maxlength="{{1000}}" />
+
+
+
+    <!-- 上传视频 -->
+    <block wx:if="{{type === 'video'}}">
+      <view class="public_content public_video">上传视频:</view>
+      <van-uploader accept="video" file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead"
+        deletable="{{ true }}" bind:delete="delete" />
+      <view class="public_button_box">
+        <view class="cover" wx:if="{{fileList3.length!==0}}">封面图片:</view>
+        <van-uploader name="3" file-list="{{ fileList3 }}" max-count="{{ 1 }}" bind:after-read="afterRead3"
+          bind:delete="delete3" bind:click-preview="clickPreview" use-slot="{{ true }}">
+          <van-button type="primary" block color="#f98538" class="public_button">上传视频封面</van-button>
+        </van-uploader>
+      </view>
+      <view style="margin-top: 32rpx;">
+        <van-button type="primary" block color="#56d679" bindtap="clickpublicVideo">发布</van-button>
+      </view>
+    </block>
+
+    <!-- 上传图片 -->
+    <block wx:if="{{type === 'picture'}}">
+      <view class="public_content public_video">上传图片（最多9张）:</view>
+      <van-uploader file-list="{{ fileList2 }}" bind:after-read="afterRead2" deletable="{{ true }}" max-count="9"
+        bind:delete="delete2" name="2" />
+      <view class="public_button_box">
+        <view class="cover" wx:if="{{fileList4.length!==0}}">封面图片:</view>
+        <van-uploader name="4" file-list="{{ fileList4 }}" max-count="{{ 1 }}" bind:after-read="afterRead4"
+          bind:delete="delete4" bind:click-preview="clickPreview" use-slot="{{ true }}">
+          <van-button type="primary" block color="#f98538" class="public_button">上传封面图片</van-button>
+        </van-uploader>
+      </view>
+      <view style="margin-top: 32rpx;">
+        <van-button type="primary" block color="#56d679" bindtap="clickpublicPic">发布</van-button>
+      </view>
+    </block>
+  </view>
+
+  <van-toast id="van-toast" />
+</view>

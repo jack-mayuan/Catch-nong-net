@@ -1,0 +1,134 @@
+/* pages/publish/publish.wxss */
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #f5f7f6;
+
+}
+
+/* 顶部我要发布标题 */
+.toPublic {
+  display: flex;
+  height: 76rpx;
+  width: 750rpx;
+  font-size: 26rpx;
+  background-color: #56d679;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.toPublic image {
+  width: 46rpx;
+  height: 40rpx;
+  margin-right: 23rpx;
+}
+
+.content {
+  padding: 48rpx 39rpx 40rpx;
+  /* background-color: #d4f5d4; */
+}
+
+/* 输入标题 */
+.title .van-cell {
+  border: 1rpx solid #e5e5e5;
+  padding: 14rpx 23rpx !important;
+}
+
+.title .van-field__placeholder {
+  color: #838383;
+}
+
+/* 所属角色 */
+.role {
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #e5e5e5;
+  padding: 0 34rpx 0 23rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+  margin-top: 34rpx;
+  background-color: #fff;
+}
+
+.role .placeHolder {
+  color: #838383;
+}
+
+.role .selected {
+  color: black;
+}
+
+.role image {
+  width: 25rpx;
+  height: 25rpx;
+  transition-duration: 0.3s;
+}
+
+.role .up {
+  transform: rotate(-180deg);
+  transition-duration: 0.3s;
+}
+.role_box .border_bottom{
+  border-bottom: 0;
+}
+/* 选择框 */
+.role_box .none{
+  display: none;
+  transition-duration: 0.3s;
+}
+.role_box .display{
+  display: block;
+  transition-duration: 0.3s;
+}
+.role_item{
+  height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 23rpx;
+  font-size: 25rpx;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin: 0 2rpx;
+  background-color: #fff;
+}
+.role_item image{
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 发布内容 */
+.public_content, .cover{
+  color: #838383;
+  font-size: 26rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  margin: 43rpx 0 28rpx;
+  padding-left: 24rpx;
+}
+
+.fabuneirong{
+  display: block;
+  background-color: #fff;
+  height: 390rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1rpx solid #e5e5e5;
+  font-size: 26rpx;
+  padding: 35rpx 23rpx;
+}
+
+.public_video{
+  margin: 24rpx 0 42rpx;
+}
+.public_button_box{
+  margin-top: 30rpx;
+}
+
+.public_button_box .public_button{
+  display: block;
+  width: 674rpx;
+}

@@ -1,0 +1,186 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/protocol/protocol",
+          "pathName": "pages/protocol/protocol",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/register/register",
+          "pathName": "pages/register/register",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pay/pay",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/pay/payState",
+          "pathName": "pages/pay/payState",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/article/article",
+          "pathName": "pages/article/article",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/publish/publish",
+          "pathName": "pages/publish/publish",
+          "query": "type=picture",
+          "scene": null
+        },
+        {
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/mystrength",
+          "pathName": "pages/my/mystrength",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/changeInfo/changeInfo",
+          "pathName": "pages/changeInfo/changeInfo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/myHonesty",
+          "pathName": "pages/my/myHonesty",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/complaint/index",
+          "pathName": "pages/complaint/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/nameCardHold/index",
+          "pathName": "pages/nameCardHold/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ceshi/index",
+          "pathName": "pages/ceshi/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/authorization/index",
+          "pathName": "pages/authorization/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ceshi2/index",
+          "pathName": "pages/ceshi2/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/authorization/editauth",
+          "pathName": "pages/authorization/editauth",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/authorization/preview",
+          "pathName": "pages/authorization/preview",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/companyDetails/index",
+          "pathName": "pages/companyDetails/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personalList/index",
+          "pathName": "pages/personalList/index",
+          "query": "id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/searchDetails/index",
+          "pathName": "pages/searchDetails/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/picMore/index",
+          "pathName": "pages/picMore/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/videoMore/index",
+          "pathName": "pages/videoMore/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/ceshi3/index",
+          "pathName": "pages/ceshi3/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/authorization/myAuthorization",
+          "pathName": "pages/authorization/myAuthorization",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<!--components/article-item/index.wxml-->
+<view class="item" wx:for="a" wx:key="*this" bindtap="todetails">
+  <image src="/images/icon.jpg" class="item_pic" />
+  <view class="item_text">
+    <view class="title">[科技] 要想提农作物产量，阴雨天气管理得做好 fsafasddfsa fsdfas </view>
+    <view class="text">寿光新鸿农业种子公司fddfdfsdfsddfsdfsdfsdfs</view>
+    <view class="text">山东省潍坊市寿光市fsddddddddddffffffffff</view>
+    <view class="text">发布时间：2021-10-16</view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+/**app.wxss**/
+.theme_colors{
+  background-color: #5cc05c;
+}
+
+

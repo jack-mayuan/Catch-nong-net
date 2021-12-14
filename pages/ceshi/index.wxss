@@ -1,0 +1,57 @@
+/* pages/ceshi/index.wxss */
+
+/* 展示图文信息的框 */
+.pic_box{
+  padding: 15rpx 0rpx 50px;
+}
+.pic_box .pic_item{
+  border-bottom: 1px solid #e7f0ea;
+  padding: 22rpx 22rpx 22rpx;
+  display: flex;
+}
+.pic_box .pic_item .phote_box{
+  width: 95rpx;
+}
+.pic_box .pic_item .phote_box .photo{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 6rpx;
+}
+.pic_box .pic_item .pic_text_box{
+  flex: 1;
+  font-size: 29rpx;
+  padding-right: 38rpx;
+}
+.pic_box .pic_item .pic_text_box .nickname{
+  color: #69708c;
+  padding-bottom: 5rpx;
+}
+.pic_box .pic_item .pic_text_box .text{
+  color: #1b1b1b;
+  line-height: 36rpx;
+  padding-bottom: 16rpx;
+}
+.pic_box .pic_item .pic_text_box .pic_box_inner{
+  display: flex;
+  flex-wrap: wrap;
+}
+.pic_box .pic_item .pic_text_box .pic_box_inner .pic{
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  width: 184rpx;
+  height: 184rpx;
+  position: relative;
+  overflow: hidden;
+}
+.pic_box .pic_item .pic_text_box .pic_box_inner .pic_last_collom{
+  margin-right: 0rpx; 
+}
+.pic_box .pic_item .pic_text_box .pic_box_inner .picture{
+  max-width: 100%;
+  max-height: 100%;
+  /* width: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

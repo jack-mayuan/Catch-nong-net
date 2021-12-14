@@ -1,0 +1,47 @@
+/* pages/changeInfo/changeInfo.wxss */
+.container{
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: #f5f7f6;
+}
+.content{
+  padding: 37rpx 39rpx;
+  color: #838383;
+}
+.content .label{
+  padding: 37rpx 24rpx 32rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+}
+/* 姓名输入框 */
+.title .van-cell {
+  border: 1rpx solid #e5e5e5;
+  padding: 14rpx 23rpx !important;
+}
+
+.title .van-field__placeholder {
+  color: #838383;
+}
+/* 职位下拉框 */
+.clear_bottom{
+  padding-bottom: 0 !important;
+}
+
+/* 返回按钮上边距 */
+.back{
+  margin-top: 30rpx;
+}
+.pic_innerbox image{
+  width: 355rpx;
+  height: 260rpx;
+}
+/* 图片相关的样式 */
+.pic_box{
+  display: flex;
+  font-size: 26rpx;
+}
+.pic_box .reset_upload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

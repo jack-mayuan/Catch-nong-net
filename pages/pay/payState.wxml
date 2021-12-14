@@ -1,0 +1,12 @@
+<!--pages/pay/payState.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="msg_box">
+      <view wx:if="{{payState}}" class="success">
+        <view>正在审核</view>
+        <view>24小时之内会审核完毕,请耐心等待</view>
+      </view>
+      <view wx:else>支付失败</view>
+    </view>
+  </view>
+</view>

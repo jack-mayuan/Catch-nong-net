@@ -1,0 +1,7 @@
+/* pages/ceshi2/index.wxss */
+.search_box{
+  width: 750rpx;
+  padding: 0 50rpx;
+  background-color: #585858;
+  box-sizing: border-box;
+}

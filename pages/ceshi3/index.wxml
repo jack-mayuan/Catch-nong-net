@@ -1,0 +1,8 @@
+<!--pages/ceshi3/index.wxml-->
+<view class="list">
+  <block wx:for="{{dataList}}" wx:key="index">
+    <article-item wx:if="{{item.type === 'article'}}" item="{{item}}"></article-item>
+    <video-item wx:if="{{item.type === 'video'}}" item="{{item}}" bindunfold="unfold" index="{{index}}" bindpause="pause" bindbindplay="bindplay"></video-item>
+    <picture-item wx:if="{{item.type === 'picture'}}" item="{{item}}" fatherindex="{{index}}" bindpicunfold="picunfold"></picture-item>
+  </block>
+</view>

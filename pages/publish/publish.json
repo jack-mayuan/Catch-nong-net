@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "menu-select": "/components/menu-select/index"
+  },
+  "navigationBarTitleText": "我要发布"
+}

@@ -1,0 +1,5 @@
+<!--components/title-bar/index.wxml-->
+<view class="toPublic">
+    <slot name="before"></slot>
+    <view>{{title}}</view>
+</view>

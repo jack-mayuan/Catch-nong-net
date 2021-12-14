@@ -1,0 +1,22 @@
+<!--pages/complaint/index.wxml-->
+<view class="container">
+  <!-- <title-bar title="投诉建议">
+    <image slot="before" src="/images/tstop.png"></image>
+  </title-bar> -->
+  <view class="content">
+    <view class="lable">输入标题</view>
+    <view class="title">
+      <van-field model:value="{{ titleValue }}" label-class="place_holder" placeholder="在此输入您的标题"
+        border="{{ false }}" />
+    </view>
+
+    <view class="lable">输入内容</view>
+    <textarea model:value="{{textareaValue}}" placeholder="在此输入您的详细内容..." class="fabuneirong" maxlength="{{1000}}" />
+    <view class="reset_top">
+      <van-button block color="#f98538" bindtap="reset">重置</van-button>
+    </view>
+    <view class="submit_top">
+      <van-button block color="#56d679" bindtap="submit">提交</van-button>
+    </view>
+  </view>
+</view>

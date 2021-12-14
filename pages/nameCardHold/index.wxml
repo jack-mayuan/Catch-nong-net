@@ -1,0 +1,66 @@
+<!--pages/nameCardHold/index.wxml-->
+<!-- <text>pages/nameCardHold/index.wxml</text> -->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <!-- <title-bar title="名片夹管理">
+    <image slot="before" src="/images/mptop.png"></image>
+  </title-bar> -->
+  <view class="content">
+    <view class="clients">
+      <view class="client {{currentIndex === 0? 'current_client': ''}}" hover-class="client_hover"
+        hover-start-time="{{0}}" hover-stay-time="{{100}}" bindtap="clickClient1">
+        <image wx:if="{{currentIndex === 0}}" src="/images/yxkh_h.png"></image>
+        <image wx:else src="/images/yxkh.png"></image>
+        <view>意向客户</view>
+      </view>
+      <view class="client {{currentIndex === 1? 'current_client': ''}}" hover-class="client_hover"
+        hover-start-time="{{0}}" hover-stay-time="{{100}}" bindtap="clickClient2">
+        <image wx:if="{{currentIndex === 1}}" src="/images/qtkh_h.png" class="image3"></image>
+        <image wx:else src="/images/qtkh.png" class="image3"></image>
+        <view>洽谈客户</view>
+      </view>
+      <view class="client {{currentIndex === 2? 'current_client': ''}}" hover-class="client_hover"
+        hover-start-time="{{0}}" hover-stay-time="{{100}}" bindtap="clickClient3">
+        <image wx:if="{{currentIndex === 2}}" src="/images/cjkh_h.png"></image>
+        <image wx:else src="/images/cjkh.png"></image>
+        <view>成交客户</view>
+      </view>
+    </view>
+    <view class="list_content">
+      <view class="item" wx:for="{{itemArray}}" wx:key="index">
+        <image src="/images/icon.jpg" class="image"></image>
+        <view class="item_right">
+          <view class="text1">寿光新红农业种子批发有限责任公司{{item.id}}</view>
+          <view class="area">
+            <view class="text2">地区：山东</view>
+            <view class="follow">
+              <view class="name_card_hold" bindtap="switchSubfollow" data-index="{{index}}">
+                <text class="chose_color">移动到</text>
+                <image src="/images/ic_genghuan.png" class="fold_pic"></image>
+              </view>
+              <!-- 意向客户,洽谈客户,成交客户 -->
+              <view class="subfollow_box {{item.switchFold? 'open': ''}}">
+                <wxs src="./../../modules/tools.wxs" module="tools" />
+                <block wx:for="{{tools.filter(foldArr,currentIndex)}}" wx:for-index="subindex" wx:for-item="subitem" wx:key="subindex">
+                  <view class="subfollow" hover-start-time="{{20}}" hover-stay-time="{{70}}"
+                    hover-class="subfollow_hover" bindtap="nameCardClick" data-subindex="{{subindex}}"
+                    data-index="{{index}}">{{subitem}}</view>
+                </block>
+              </view>
+            </view>
+            <image src="/images/shanchu.png" class="delete" bindtap="clickDelete" data-index="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <van-dialog id="van-dialog" />
+  <van-toast id="van-toast" />
+</scroll-view>

@@ -1,0 +1,33 @@
+/* pages/pay/payState.wxss */
+.container{
+  height: 100vh;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7f6;
+}
+.container .content{
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  border: 1px solid rgb(226, 224, 224);
+  justify-content: space-evenly;
+}
+.content .msg_box{
+  background-color: #56d679;
+  width: 90vw;
+  padding: 50rpx 0;
+  border-radius: 50rpx;
+  color: white;
+}
+.content .success{
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

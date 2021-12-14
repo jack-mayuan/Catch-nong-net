@@ -1,0 +1,48 @@
+<!--pages/picMore/index.wxml-->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <view class="search_box">
+    <search searchValue="{{searchValue}}" fuzzyResultArr="{{fuzzyResultArr}}" bindinput="input" bindsearch="search"
+      bindfuzzyResultSearch="fuzzyResultSearch" bindclearFuzzyArr="clearFuzzyArr"></search>
+  </view>
+  <view class="pic_box">
+    <view class="pic_item" wx:for="{{picList}}" wx:key="index" wx:for-index="fatherindex">
+      <view class="phote_box">
+        <!-- 左侧头像栏 -->
+        <image src="/images/icon.jpg" class="photo"></image>
+      </view>
+      <view class="pic_text_box">
+        <view class="role_box">
+          <view class="nickname">昵称昵称昵称昵称</view>
+          <text class="role1 role">供应链</text>
+          <text class="role2 role">经理</text>
+        </view>
+        <view class="company_box">
+          <view class="company">寿光新红农业种子批发有限责任公司</view>
+        </view>
+        <view class="text">
+          <view class="{{item.isunfold?'':'fold'}} fold_inline">
+            {{item.content}}<text
+              wx:if="{{item.isunfold && item.content.length > 18}}" class="tool left20" bindtap="picunfold" data-index="{{fatherindex}}">收起</text>
+          </view>
+          <text wx:if="{{!item.isunfold && item.content.length > 18}}" class="tool" bindtap="picunfold" data-index="{{fatherindex}}">展示</text>
+        </view>
+        <view class="pic_box_inner">
+          <view wx:for="{{item.imageArray}}" wx:key="id" class="pic {{(index+1)%3 === 0?'pic_last_collom': ''}}">
+            <image src="{{item.url}}" class="picture" bindtap="onPreviewImage" data-index="{{index}}"
+              data-fatherindex="{{fatherindex}}"></image>
+          </view>
+        </view>
+        <view class="time_distance">2021-11-22 10:10:30</view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <van-toast id="van-toast" />
+</scroll-view>

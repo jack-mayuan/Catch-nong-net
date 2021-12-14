@@ -1,0 +1,451 @@
+/* pages/index/index.wxss */
+.container {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* 取消掉微信小程序搜索框的上padding */
+.container .search_box .van-search {
+  padding: 0 12px 10px;
+}
+
+.container .top_image {
+  width: 750rpx;
+  height: 327rpx;
+}
+
+/* 宣传展示，图文信息栏目样式 */
+.video_pic {
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+  padding: 0 22rpx 29rpx;
+  background-color: #fff;
+}
+
+.video_pic .video {
+  width: 325rpx;
+  height: 78rpx;
+  background-color: #56d679;
+  color: white;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.video_pic .video .video_icon {
+  width: 48rpx;
+  height: 40rpx;
+}
+
+.video_pic .video .video_text {
+  padding-left: 29rpx;
+}
+
+.video_pic .video_hover {
+  background-color: rgb(40, 151, 12);
+}
+
+.video_pic .pic {
+  width: 325rpx;
+  height: 78rpx;
+  background-color: white;
+  color: #56d679;
+  border: 4rpx solid #56d679;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video_pic .pic .pic_icon {
+  width: 48rpx;
+  height: 40rpx;
+}
+
+.video_pic .pic .pic_text {
+  padding-left: 29rpx;
+}
+
+.video_pic .select_pic_video {
+  width: 325rpx;
+  height: 78rpx;
+  background-color: #56d679;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video_pic .pic_hover {
+  background-color: rgb(40, 151, 12);
+}
+/* 六个状态 */
+.body{
+  padding: 0 22rpx 15rpx;
+}
+.body .body_content{
+  width: 100%;
+  background-color: #fff;
+  /* border-radius: 10rpx; */
+  /* border: 1rpx solid #e3e3e3; */
+  /* padding: 17rpx 0 0; */
+  /* box-shadow: 0 10rpx 10rpx #aaacab; */
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.body .body_content .row{
+  height: 132rpx;
+  box-sizing: border-box;
+  width: 100%;
+  /* padding: 0 33rpx 0; */
+  display: flex;
+  /* justify-content: flex-start; */
+  justify-content: space-around;
+}
+.body .body_content .row .function{
+  padding-top: 0;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 154rpx;
+  font-size: 26rpx;
+}
+/* .body .body_content .row .function .gongxu{
+  width: 100rpx;
+  height: 100rpx;
+} */
+.body .body_content .row .function_hover{
+  background-color: rgb(223, 213, 213);
+}
+
+.body .body_content .row .function image{
+  width: 58rpx;
+  height: 58rpx;
+}
+
+/* 视频列表展示 */
+.list_disp {
+  width: 100%;
+  padding: 10rpx 22rpx 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.list_disp .list_box {
+  display: flex;
+}
+
+.list_disp .list_box .vertical {
+  width: 8rpx;
+  height: 42rpx;
+  background-color: #56d679;
+  margin-right: 20rpx;
+}
+
+.list_disp .more {
+  font-size: 24rpx;
+  color: rgb(171, 176, 182);
+}
+
+/* 视频展示框 */
+.video_box {
+  padding: 0 22rpx 0rpx;
+}
+.video_box .video_item{
+  border-bottom: 1px solid #e7f0ea;
+  padding-top: 25rpx;
+}
+.video_box .video_item .video {
+  /* width: 100%; */
+  width: 612rpx;
+  height: 317rpx;
+  box-sizing: border-box;
+  margin-left: 94rpx;
+  position: relative;
+}
+
+/* 视频标题 */
+.video_box .video_item .bc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 74rpx;
+  background-color: rgba(72, 74, 77, 0.5);
+}
+
+.video_box .video_item .bc .title {
+  color: white;
+  font-size: 28rpx;
+  line-height: 74rpx;
+  padding-left: 30rpx;
+}
+/* 视频上方发布人样式开始------------------------------------------------------- */
+.video_box .video_item .video_text_box {
+  flex: 1;
+  font-size: 29rpx;
+  padding-right: 38rpx;
+  display: flex;
+}
+.video_box .video_item .video_text_box .phote_box {
+  /* width: 95rpx; */
+  margin-right: 20rpx;
+}
+
+.video_box .video_item .video_text_box .phote_box .photo {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 6rpx;
+}
+.video_box .video_item .video_text_box .box_border{
+  width: 574rpx;
+}
+
+/* -----昵称等样式开始----- */
+.video_box .video_item .video_text_box .role_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rpx 0;
+}
+.video_box .video_item .video_text_box .nickname {
+  color: #69708c;
+  /* padding-bottom: 5rpx; */
+}
+.video_box .video_item .video_text_box .role_box .role{
+  padding: 0 15rpx;
+  display: inline-block;
+  border-radius: 5rpx;
+  text-align: center;
+}
+.video_box .video_item .video_text_box .role_box .role1 {
+  color: #1ea830;
+  background: rgba(30, 168, 48, 0.09);
+}
+.video_box .video_item .video_text_box .role_box .role2 {
+  color: #7656b5;
+  background: rgba(118, 86, 181, 0.09);
+}
+.video_box .video_item .video_text_box .company_box{
+  padding: 5rpx 0;
+}
+.video_box .video_item .video_text_box .company {
+  padding: 0 15rpx;
+  border-radius: 5rpx;
+  /* text-align: center; */
+  color: #2972FA;
+  background: rgba(41, 114, 250, 0.1);
+  display: inline-block;
+}
+
+/* -----昵称等样式结束------- */
+.video_box .video_item .video_text_box .text {
+  color: #1b1b1b;
+  line-height: 36rpx;
+  padding-bottom: 16rpx;
+  display: inline-block;
+}
+.video_box .video_item .video_text_box .fold_inline{
+  display: inline-block;
+}
+.video_box .video_item .video_text_box .fold{
+  /* width: ***px; */
+  display: inline-block;
+  width: 518rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.video_box .video_item .video_text_box .tool{
+  color: blue;
+  display: inline-block;
+  vertical-align: top;
+  /* vertical-align: baseline; */
+}
+
+.video_box .video_item .video_text_box .left20{
+  margin-left: 20rpx;
+}
+/*  */
+.video_box .video_item .video_text_box .pic_box_inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video_box .video_item .video_text_box .pic_box_inner .pic {
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  width: 184rpx;
+  height: 184rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.video_box .video_item .video_text_box .pic_box_inner .pic_last_collom {
+  margin-right: 0rpx;
+}
+
+.video_box .video_item .video_text_box .pic_box_inner .picture {
+  max-width: 100%;
+  max-height: 100%;
+  /* width: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video_box .video_item .time_distance {
+  font-size: 24rpx;
+  color: #707070;
+  padding: 20rpx 0 20rpx 94rpx;
+}
+
+/* 展示图文信息的框 */
+.pic_box {
+  padding: 2rpx 0rpx 0;
+}
+
+.pic_box .pic_item {
+  border-bottom: 1px solid #e7f0ea;
+  padding: 22rpx 22rpx 22rpx;
+  display: flex;
+}
+
+.pic_box .pic_item .phote_box {
+  width: 95rpx;
+}
+
+.pic_box .pic_item .phote_box .photo {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 6rpx;
+}
+
+.pic_box .pic_item .pic_text_box {
+  flex: 1;
+  font-size: 29rpx;
+  padding-right: 38rpx;
+}
+
+/* -------------------昵称等样式开始------------------- */
+.pic_box .pic_item .pic_text_box .role_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rpx 0;
+}
+.pic_box .pic_item .pic_text_box .nickname {
+  color: #69708c;
+  /* padding-bottom: 5rpx; */
+}
+.pic_box .pic_item .pic_text_box .role_box .role{
+  padding: 0 15rpx;
+  display: inline-block;
+  border-radius: 5rpx;
+  text-align: center;
+}
+.pic_box .pic_item .pic_text_box .role_box .role1 {
+  color: #1ea830;
+  background: rgba(30, 168, 48, 0.09);
+}
+.pic_box .pic_item .pic_text_box .role_box .role2 {
+  color: #7656b5;
+  background: rgba(118, 86, 181, 0.09);
+}
+.pic_box .pic_item .pic_text_box .company_box{
+  padding: 5rpx 0;
+}
+.pic_box .pic_item .pic_text_box .company {
+  padding: 0 15rpx;
+  border-radius: 5rpx;
+  /* text-align: center; */
+  color: #2972FA;
+  background: rgba(41, 114, 250, 0.1);
+  display: inline-block;
+}
+
+/* ----------------昵称等样式结束-------------------------- */
+.pic_box .pic_item .pic_text_box .text {
+  color: #1b1b1b;
+  line-height: 36rpx;
+  padding-bottom: 16rpx;
+}
+.pic_box .pic_item .pic_text_box .fold_inline{
+  display: inline-block;
+}
+.pic_box .pic_item .pic_text_box .fold{
+  /* width: ***px; */
+  display: inline-block;
+  width: 518rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.pic_box .pic_item .pic_text_box .tool{
+  color: blue;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.pic_box .pic_item .pic_text_box .left20{
+  margin-left: 20rpx;
+}
+.pic_box .pic_item .pic_text_box .pic_box_inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pic_box .pic_item .pic_text_box .pic_box_inner .pic {
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  width: 184rpx;
+  height: 184rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.pic_box .pic_item .pic_text_box .pic_box_inner .pic_last_collom {
+  margin-right: 0rpx;
+}
+
+.pic_box .pic_item .pic_text_box .pic_box_inner .picture {
+  max-width: 100%;
+  max-height: 100%;
+  /* width: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pic_box .pic_item .pic_text_box .time_distance {
+  font-size: 24rpx;
+  color: #707070;
+  padding: 20rpx 0;
+}
+
+/* 下方加载样式 */
+.loading {
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.hint {
+  text-align: center;
+  padding: 0 0 10rpx;
+  font-size: 26rpx;
+  color: #707070;
+}
+
+.block {
+  height: 50px;
+}

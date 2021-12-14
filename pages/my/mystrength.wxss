@@ -1,0 +1,30 @@
+/* pages/my/mystrength.wxss */
+.container{
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5f7f6;
+}
+.container .grade{
+  margin-top: 180rpx;
+  line-height: 103rpx;
+  font-size: 103rpx;
+  color: #f2840b;
+  text-align: center;
+}
+.container .box{
+  height: 378rpx;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .box image{
+  height: 282rpx;
+  width: 307rpx;
+}
+.container .box .text{
+  font-size: 37rpx;
+  line-height: 37rpx;
+
+}

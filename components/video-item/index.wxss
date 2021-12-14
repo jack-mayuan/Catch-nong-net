@@ -1,0 +1,146 @@
+/* components/video-item/index.wxss */
+/* 视频展示框 */
+.video_item{
+  border-bottom: 1px solid #e7f0ea;
+  padding-top: 25rpx;
+}
+.video_item .video {
+  /* width: 100%; */
+  width: 612rpx;
+  height: 317rpx;
+  box-sizing: border-box;
+  margin-left: 94rpx;
+  position: relative;
+}
+
+/* 视频标题 */
+.video_item .bc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 74rpx;
+  background-color: rgba(72, 74, 77, 0.5);
+}
+
+.video_item .bc .title {
+  color: white;
+  font-size: 28rpx;
+  line-height: 74rpx;
+  padding-left: 30rpx;
+}
+/* 视频上方发布人样式开始------------------------------------------------------- */
+.video_item .video_text_box {
+  flex: 1;
+  font-size: 29rpx;
+  padding-right: 38rpx;
+  display: flex;
+}
+.video_item .video_text_box .phote_box {
+  margin-right: 20rpx;
+}
+
+.video_item .video_text_box .phote_box .photo {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 6rpx;
+}
+
+/* -----昵称等样式开始----- */
+.video_item .video_text_box .role_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rpx 0;
+}
+.video_item .video_text_box .nickname {
+  color: #69708c;
+  /* padding-bottom: 5rpx; */
+}
+.video_item .video_text_box .role_box .role{
+  padding: 0 15rpx;
+  display: inline-block;
+  border-radius: 5rpx;
+  text-align: center;
+}
+.video_item .video_text_box .role_box .role1 {
+  color: #1ea830;
+  background: rgba(30, 168, 48, 0.09);
+}
+.video_item .video_text_box .role_box .role2 {
+  color: #7656b5;
+  background: rgba(118, 86, 181, 0.09);
+}
+.video_item .video_text_box .company_box{
+  padding: 5rpx 0;
+}
+.video_item .video_text_box .company {
+  padding: 0 15rpx;
+  border-radius: 5rpx;
+  /* text-align: center; */
+  color: #2972FA;
+  background: rgba(41, 114, 250, 0.1);
+  display: inline-block;
+}
+
+/* -----昵称等样式结束------- */
+.video_item .video_text_box .text {
+  color: #1b1b1b;
+  line-height: 36rpx;
+  padding-bottom: 16rpx;
+  display: inline-block;
+}
+.video_item .video_text_box .fold_inline{
+  display: inline-block;
+}
+.video_item .video_text_box .fold{
+  /* width: ***px; */
+  display: inline-block;
+  width: 518rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.video_item .video_text_box .tool{
+  color: blue;
+  display: inline-block;
+  vertical-align: top;
+  /* vertical-align: baseline; */
+}
+
+.video_item .video_text_box .left20{
+  margin-left: 20rpx;
+}
+/*  */
+.video_item .video_text_box .pic_box_inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video_item .video_text_box .pic_box_inner .pic {
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  width: 184rpx;
+  height: 184rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.video_item .video_text_box .pic_box_inner .pic_last_collom {
+  margin-right: 0rpx;
+}
+
+.video_item .video_text_box .pic_box_inner .picture {
+  max-width: 100%;
+  max-height: 100%;
+  /* width: 100%; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video_item .time_distance {
+  font-size: 24rpx;
+  color: #707070;
+  padding: 20rpx 0 20rpx 94rpx;
+}

@@ -1,0 +1,90 @@
+<!--pages/list/list.wxml-->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <view class="search_box">
+    <search searchValue="{{searchValue}}" fuzzyResultArr="{{fuzzyResultArr}}" bindinput="input" bindsearch="search"
+      bindfuzzyResultSearch="fuzzyResultSearch" bindclearFuzzyArr="clearFuzzyArr" />
+  </view>
+  <!-- 按时间，按诚信度，按实力 -->
+  <view id="sort">
+    <van-dropdown-menu active-color="#56d679">
+      <van-dropdown-item title="{{option1Chose.title}}" options="{{ option1 }}" bind:change="change1" />
+      <van-dropdown-item title="{{option2Chose.title}}" options="{{ option2 }}" bind:change="change2" />
+      <van-dropdown-item title="{{option3Chose.title}}" options="{{ option3 }}" bind:change="change3" />
+    </van-dropdown-menu>
+  </view>
+
+
+  <!-- 种子公司，苗场，代办，供应链 -->
+  <view class="four_button">
+    <view class="button_box">
+      <button wx:for="{{buttonList}}" wx:key="id" data-index="{{index}}"
+        class="button {{roleCurrentIndex === index? 'active': ''}}" bindtap="roleClick">{{item.text}}
+        <block wx:if="{{ index === 3 }}">
+          <image src="/images/xiangshang.png" wx:if="{{isOpen}}"></image>
+          <image src="/images/xiangxia1.png" wx:else></image>
+        </block>
+      </button>
+      <view class="options {{isOpen?'open_option':''}}">
+        <van-button plain custom-style="height: 50rpx; color: gray; width: 154rpx;font-size: 24rpx;display: block; border-top: none;"
+          wx:for="{{buttonArr}}" wx:key="*this" bindtap="checkone" data-value2="{{item}}">{{item}}</van-button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 列表展示部分 -->
+  <view class="list">
+    <view class="item" wx:for="{{listArr}}" wx:key="index" data-index="{{index}}">
+      <image src="/images/icon.jpg" class="item_pic" bindtap="toCompany" data-index="{{index}}" />
+      <view class="item_text">
+        <view class="title" bindtap="toCompany" data-index="{{index}}">寿光新红农业种子批发有限责任公司</view>
+        <view class="text">实力（0-100）：70</view>
+        <view class="text">
+          诚信度:
+          <van-rate readonly value="{{ rateValue }}" bind:change="rateChange" size="{{ 12 }}" color="#ffd21e" allow-half
+            void-icon="star" void-color="#eee" />
+        </view>
+        <view class="area">
+          <view>地区：山东</view>
+          <view class="two_pic">
+            <image src="/images/ry.png" class="pic1" bindtap="toPersonalList"></image>
+            <image src="/images/sq.png" bindtap="tosqpage"></image>
+          </view>
+          <view class="follow">
+            <view class="name_card_hold" bindtap="switchSubfollow" data-index="{{index}}">
+              <block wx:if="{{item.isChoseFold}}">
+                <text class="chose_color">{{item.isChoseFold}}</text>
+                <image src="/images/tianjiatianchong.png" class="fold_pic"></image>
+              </block>
+              <block wx:else>
+                <text>加入名片夹</text>
+                <image src="/images/tianjia.png" class="fold_pic"></image>
+              </block>
+            </view>
+            <!-- 意向客户,洽谈客户,成交客户 -->
+            <view class="subfollow_box {{item.switchFold? 'open': ''}}">
+              <block wx:for="{{foldArr}}" wx:for-index="subindex" wx:for-item="subitem" wx:key="subindex">
+                <view class="subfollow" hover-start-time="{{20}}" hover-stay-time="{{70}}" hover-class="subfollow_hover"
+                  bindtap="nameCardClick" data-subindex="{{subindex}}" data-index="{{index}}">{{subitem}}</view>
+              </block>
+              <!-- <view class="subfollow" hover-start-time="{{20}}" hover-stay-time="{{70}}" hover-class="subfollow_hover"
+                bindtap="nameCardClick" data-type="{{2}}" data-index="{{index}}">洽谈客户</view>
+              <view class="subfollow" hover-start-time="{{20}}" hover-stay-time="{{70}}" hover-class="subfollow_hover"
+                bindtap="nameCardClick" data-type="{{3}}" data-index="{{index}}">成交客户</view> -->
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <view class="block" />
+  <!-- toast提示的挂载点 -->
+  <van-toast id="van-toast" />
+</scroll-view>

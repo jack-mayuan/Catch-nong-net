@@ -1,0 +1,43 @@
+<!--pages/article/article.wxml-->
+<scroll-view class="container" 
+  scroll-y
+  refresher-enabled="{{true}}"
+  refresher-threshold="{{100}}"
+  refresher-default-style="black"
+  refresher-background="#f4f4f4"
+  refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh"
+  bindscrolltolower="scrollBottom"
+>
+  <view class="search_box">
+    <search searchValue="{{searchValue}}" fuzzyResultArr="{{fuzzyResultArr}}" bindinput="input" bindsearch="search"
+  bindfuzzyResultSearch="fuzzyResultSearch" bindclearFuzzyArr="clearFuzzyArr" />
+  </view>
+  <!-- 按阅读量，按时间 -->
+  <view id="sort">
+    <van-dropdown-menu active-color="#56d679">
+      <van-dropdown-item title="{{option1Chose.text}}" options="{{ option1 }}" bind:change="change1"/>
+      <van-dropdown-item title="{{option2Chose.text}}" options="{{ option2 }}" bind:change="change2"/>
+    </van-dropdown-menu>
+  </view>
+  <!-- 列表展示部分 -->
+  <view class="list">
+    <view class="item {{index===arr.length?'last_item': ''}}" wx:for="abcdedgad" wx:key="*this" bindtap="todetails">
+      <image src="/images/icon.jpg" class="item_pic" />
+      <view class="item_text">
+        <view class="title">[科技] 要想提农作物产量，阴雨天气管理得做好 fsafasddfsa fsdfas </view>
+        <view class="text">发布时间：2021-10-16</view>
+        <view class="text reading">阅读量: 1305</view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{isReachBottom}}">
+      <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <view class="block"/>
+  <!-- toast提示的挂载点 -->
+  <van-toast id="van-toast" />
+</scroll-view>

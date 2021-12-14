@@ -1,0 +1,18 @@
+<!--pages/pay/pay.wxml-->
+<view class="container">
+  <title-bar title="购买会员">
+    <!-- <image slot="before" src="/images/icon.jpg"></image> -->
+  </title-bar>
+  <view class="content">
+    <van-cell-group inset>
+      <van-cell title="公司名：" value="{{company}}" />
+      <van-cell title="您的角色：" value="{{firstRole}}" />
+      <van-cell title="您的二级角色：" value="{{secondRole}}" />
+      <van-cell title="姓名：" value="{{name}}" />
+      <van-cell title="会员价格：" value="{{memberPrice}}" />
+    </van-cell-group>
+    <view class="button_box">
+      <van-button type="primary" round size="normal" block bindtap="topayState">确定支付</van-button>
+    </view>
+  </view>
+</view>

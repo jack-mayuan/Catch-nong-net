@@ -1,0 +1,9 @@
+var filter = function (arr,index) {
+  var newArr = arr.filter(function (value,currentIndex){
+    return currentIndex !== index
+  })
+  return newArr;
+}
+module.exports = {
+  filter: filter,
+};

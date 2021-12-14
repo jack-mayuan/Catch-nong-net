@@ -1,0 +1,39 @@
+<!--pages/changeInfo/changeInfo.wxml-->
+<view class="container">
+  <!-- <title-bar title="修改信息">
+    <image slot="before" src="/images/xgtop.png"></image>
+  </title-bar> -->
+  <view class="content">
+    <view class="label">姓名：</view>
+    <view class="title">
+      <van-field model:value="{{ titleValue }}" label-class="place_holder" placeholder="请输入姓名" border="{{ false }}" />
+    </view>
+    <view class="label clear_bottom">职位：</view>
+    <menu-select option="{{jobOption}}" value="{{jobValue}}" bind:change="changeJob"></menu-select>
+    <view class="label">电话：</view>
+    <view class="title">
+      <van-field model:value="{{ phoneValue }}" label-class="place_holder" placeholder="请输入电话" border="{{ false }}" />
+    </view>
+    <view class="label">地址：</view>
+    <view class="title">
+      <van-field model:value="{{ addressValue }}" label-class="place_holder" placeholder="请输入地址" border="{{ false }}" />
+    </view>
+    <view class="label">营业执照：</view>
+    <view class="pic_innerbox">
+      <image src="{{fileList[0].url}}" bindtap="onPreviewImage" data-index="0"></image>
+    </view>
+    <view class="pic_box">
+      <view class="reset_upload">
+        <view>重新上传</view>
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" preview-image="{{false}}" />
+      </view>
+    </view>
+    <view class="back">
+      <van-button color="#f98538" block bindtap="sure">确定</van-button>
+    </view>
+    <view class="back">
+      <van-button color="#56d679" block bindtap="back">返回</van-button>
+    </view>
+  </view>
+  <van-toast id="van-toast" />
+</view>

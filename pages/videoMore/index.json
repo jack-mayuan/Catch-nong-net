@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "宣传展示",
+  "usingComponents": {
+    "search": "../../components/search/index"
+  }
+}

@@ -1,0 +1,139 @@
+/* pages/my/my.wxss */
+.container{
+  background-color: #f5f7f6;
+  height: 100vh;
+  overflow-y: scroll;
+}
+/* 头像，公司，姓名，角色 */
+.header{
+  height: 556rpx;
+  box-sizing: border-box;
+  background-color: #56d679;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 66rpx 0 215rpx;
+}
+.header .personal_msg{
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-size: 26rpx;
+}
+.header .personal_msg image{
+  width: 164rpx;
+  height: 164rpx;
+  border-radius: 50%;
+}
+
+.header .personal_msg .role{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.header .personal_msg .role .two_role{
+  padding-left: 50rpx;
+}
+/* 投诉建议，我要授权，我要发布 */
+.header .box{
+  position: absolute;
+  left: 35rpx;
+  bottom: -31rpx;
+  width: 678rpx;
+  height: 186rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  box-shadow: 0 0 30rpx #dae2ef;
+  border-bottom: 1rpx solid #c8d7ea;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+.header .box .box_inner{
+  padding-top: 39rpx;
+  padding-bottom: 28rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666666;
+}
+.header .box .box_inner_hover{
+  background-color: rgb(223, 213, 213);
+}
+.header .box .box_inner image{  
+  width: 76rpx;
+  height: 76rpx;
+}
+
+/* 下面地址管理部分 */
+.body{
+  padding: 69rpx 35rpx 25rpx;
+}
+.body .body_content{
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  border: 1rpx solid #e3e3e3;
+  padding: 17rpx 0 0;
+  box-shadow: 0 10rpx 10rpx #aaacab;
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.body .body_content .row{
+  height: 182rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 33rpx 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.body .body_content .row .function{
+  padding-top: 35rpx;
+  padding-bottom: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 154rpx;
+  font-size: 26rpx;
+}
+.body .body_content .row .function_hover{
+  background-color: rgb(223, 213, 213);
+}
+
+.body .body_content .row .function image{
+  width: 58rpx;
+  height: 58rpx;
+}
+
+
+/* 发布popup */
+.van-popup--bottom{
+  z-index: 10000 !important;
+}
+.popup_inner{
+  width: 100%;
+  /* height: 100%; */
+  color: #666666;
+  font-size: 26rpx;
+}
+.popup_inner view{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.popup_inner .hover_public{
+  background-color: rgb(241, 238, 238);
+}
+.popup_inner .top_view{
+  margin-top: 50rpx;
+}

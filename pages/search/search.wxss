@@ -1,0 +1,325 @@
+/* pages/search/search.wxss */
+.container {
+  height: 100vh;
+  background-color: #f5f7f6;
+}
+
+.search_box {
+  /* width: 750rpx; */
+  height: 232rpx;
+  background-color: #56d679;
+  padding: 76rpx 34rpx 0;
+  box-sizing: border-box;
+}
+
+/* 筛选 */
+.sort_box {
+  height: 85rpx;
+  background-color: rgb(76, 194, 76);
+  display: flex;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+}
+
+.sort_box .sort {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 85rpx;
+  text-align: center;
+  color: #666666;
+  background-color: #f5f7f6;
+}
+
+.sort_box .sort_click {
+  background-color: lightgray;
+}
+
+.sort_box .sort .pic_read {
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 18rpx;
+}
+
+.sort_box .filtrate_btn {
+  background-color: #fbb436;
+  width: 125rpx;
+  line-height: 85rpx;
+  font-size: 26rpx;
+  padding: 0 0;
+  color: white;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort_box .filtrate_btn .chose_pic {
+  width: 18rpx;
+  height: 28rpx;
+  margin-left: 11rpx;
+}
+
+/* 筛选悬浮变色 */
+.sort_box .filtrate_hove {
+  background-color: #c5c3c0;
+  width: 125rpx;
+  line-height: 85rpx;
+  font-size: 26rpx;
+  padding: 0 0;
+}
+
+/* 按抗性，按地区 */
+.kangxign_diqu {
+  height: 63rpx;
+  line-height: 63rpx;
+  font-size: 26rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #e4e4e4;
+  display: flex;
+  color: #666666;
+}
+
+.kangxign_diqu>view {
+  flex: 1;
+}
+
+.kangxign_diqu .pic {
+  width: 16rpx;
+  height: 14rpx;
+  padding-left: 24rpx;
+  /* vertical-align: middle; */
+}
+
+.kangxign_diqu .region {
+  border-right: 1rpx solid #e4e4e4;
+  width: 375rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kangxign_diqu .chose_reg_res {
+  color: #56d679;
+}
+
+.kangxign_diqu .resistance {
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+.kangxign_diqu .resistance .ankangxing{
+  max-width: 300rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.four_button {
+  padding: 20rpx 0 0;
+  position: relative;
+}
+
+/* ------------------------------------------------- */
+.press_resistance {
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+  width: 100%;
+  height: 600rpx;
+  z-index: 101;
+  background-color: #ffffff;
+  opacity: 1;
+  color: #606060;
+  font-size: 26rpx;
+}
+
+.press_resistance .top_box {
+  height: 528rpx;
+  display: flex;
+}
+
+.press_resistance .top_box .top_left_box {
+  width: 228rpx;
+  overflow: scroll;
+  height: 528rpx;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  padding: 32rpx 0;
+}
+
+.press_resistance .top_box .top_left_box .fruits {
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+}
+
+.press_resistance .top_box .top_left_box .fruits_active {
+  color: #57d479;
+}
+
+.press_resistance .top_box .top_left_box .fruits_click {
+  background-color: lightgray;
+}
+
+.press_resistance .top_box .top_right_box {
+  /* background-color: rgb(170, 216, 177); */
+  flex: 1;
+  overflow: scroll;
+  padding: 43rpx 36rpx;
+}
+
+.top_right_box .variety {
+  height: auto;
+}
+
+.top_right_box .variety .variety_name {
+  color: #323232;
+  line-height: 26rpx;
+  height: 26rpx;
+}
+
+.top_right_box .variety .res_box {
+  padding: 20rpx 0 6rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* background-color: rgb(199, 168, 100); */
+}
+
+.top_right_box .variety .res_box .res {
+  width: 135rpx;
+  height: 42rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #e3e3e3;
+  background-color: #e2e2e2;
+  margin-bottom: 14rpx;
+  margin-right: 24rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.top_right_box .variety .res_box .res2 {
+  margin-right: 0rpx;
+}
+
+.top_right_box .variety .res_box .active {
+  color: #54d579;
+  background-color: #e3f8e9;
+  border: 1rpx solid #56d57a;
+}
+
+
+.press_resistance .bottom_box {
+  height: 72rpx;
+  display: flex;
+}
+
+.press_resistance .bottom_box .bottom_left_box {
+  width: 228rpx;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.click_hover {
+  background-color: lightgray;
+}
+
+.press_resistance .bottom_box .bottom_right_box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #56d679;
+  color: white;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------- */
+/* 种子公司，苗场，代办，供应链 */
+.four_button .button_box{
+  height: 60rpx;
+  display: flex;
+  /* justify-content: space-evenly; */
+  position: relative;
+}
+
+.four_button .button_box .button {
+  width: 154rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  color: #676767;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.four_button .button_box .button image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+}
+
+.four_button .button_box .active {
+  background-color: #48d68a;
+  color: white;
+}
+
+.four_button .options {
+  position: absolute;
+  right: 17rpx;
+  top: 60rpx;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s;
+  z-index: 1;
+}
+
+.four_button .open_option {
+  max-height: 1000rpx;
+  transition: max-height .5s;
+}
+.four_button .down_border{
+  /* width: 562rpx; */
+  margin-top: 20rpx;
+}
+
+
+/* 列表展示部分 */
+.list {
+  padding: 7rpx 22rpx 0;
+}
+
+/* 下方加载样式 */
+.loading {
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.hint {
+  text-align: center;
+  padding: 0 0 10rpx;
+  font-size: 26rpx;
+  color: #707070;
+}
+
+.block {
+  height: 50px;
+}

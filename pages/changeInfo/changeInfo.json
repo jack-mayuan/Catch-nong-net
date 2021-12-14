@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title-bar": "../../components/title-bar",
+    "menu-select": "../../components/menu-select"
+  },
+  "navigationBarTitleText": "修改信息"
+}

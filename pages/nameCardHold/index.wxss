@@ -1,0 +1,152 @@
+/* pages/nameCardHold/index.wxss */
+.container{
+  height: 100vh;
+  /* overflow-y: scroll; */
+  background-color: #f5f7f6;
+}
+.content{
+  padding: 51rpx 37rpx 30rpx;
+}
+.content .clients{
+  height: 186rpx;
+  border: 1rpx solid #c8d7ea;
+  border-radius: 12rpx;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 30rpx 30rpx #dae2ef;
+}
+.content .clients .client{
+  flex: 1;
+  padding: 39rpx 0;
+  height: 107rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  color: #999999;
+  font-size: 26rpx;
+  line-height: 26rpx;
+}
+.content .clients .client image{
+  width: 48rpx;
+  height: 56rpx;
+}
+.content .clients .client .image3{
+  width: 59rpx;
+  height: 40rpx;
+  margin-top: 8rpx;
+}
+/* 客户板块点击亮深色背景色 */
+.client_hover{
+  background-color: rgb(223, 213, 213);
+}
+/* 客户选中之后出现的颜色 */
+.current_client{
+  color: #56d57a !important;
+}
+/* 列表容器样式 */
+.list_content{
+  margin-top: 21rpx;
+  /* background-color: #fff; */
+}
+/* 列表中每一项的样式 */
+.list_content .item{
+  height: 179rpx;
+  box-sizing: border-box;
+  margin-top: 36rpx;
+  padding: 0 7rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.list_content .item .image{
+  width: 290rpx;
+  height: 179rpx;
+}
+.list_content .item .item_right{
+  flex: 1;
+  margin-left: 29rpx;
+  font-size: 26rpx;
+  line-height: 47rpx;
+}
+.list_content .item .item_right .text1{
+  font-weight: 500;
+}
+
+.list_content .item .item_right .area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20rpx;
+  font-weight: 500;
+  line-height: 33rpx;
+  width: 364rpx;
+  margin-top: 20rpx;
+}
+.list_content .item .item_right .area .delete{
+  width: 26rpx;
+  height: 26rpx;
+}
+.list_content .item .item_right .area .text2{
+  color: #555555;
+}
+.list_content .item .item_right .area .follow{
+  color: #707070;
+  position: relative;
+}
+.list_content .item .item_right .area .follow .name_card_hold{
+  display: flex;
+  align-items: center;
+} 
+.list_content .item .item_right .area .follow .name_card_hold .chose_color{
+  color: #ea9329;
+}
+
+.list_content .item .item_right .area .follow .fold_pic{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 6rpx;
+}
+.list_content .item .item_right .area .follow .subfollow_box{
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+  border-radius: 10rpx;
+  top: 32rpx;
+  right: -32rpx;
+  width: 160rpx;
+  color: #ea9329;
+  background-color: rgb(255, 255, 255);
+}
+.list_content .item .item_right .area .follow .open{
+  max-height: 1000rpx;
+  transition: max-height .5s;
+}
+.list_content .item .item_right .area .follow .subfollow_box .subfollow{
+  height: 30rpx;
+  padding: 10rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #e9e6e6;
+}
+.list_content .item .item_right .area .follow .subfollow_box .subfollow_hover{
+  background-color: lightgray;
+}
+.list_content .item .item_right .area .follow .subfollow_box .subfollow image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+/* 下方加载样式 */
+.loading{
+  text-align: center;
+  padding: 10rpx 0;
+}
+.hint{
+  text-align: center;
+  padding: 0 0 10rpx;
+  font-size: 26rpx;
+  color: #707070;
+}

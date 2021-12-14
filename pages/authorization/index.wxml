@@ -1,0 +1,64 @@
+<!--pages/authorization/index.wxml-->
+<!-- <text>pages/authorization/index.wxml</text> -->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <!-- <title-bar title="我要授权">
+    <image slot="before" src="/images/sqtopicon.png" class="image"></image>
+  </title-bar> -->
+  <view class="sq_box">
+    <view class="sq_box_inner">
+      <view class="button right {{sqButton==='sq'? 'button_hover': ''}}" bindtap="tosq">我要授权</view>
+      <view class="button {{sqButton==='mysq'? 'button_hover': ''}}" bindtap="tomysq">我的授权</view>
+    </view>
+  </view>
+  <!-- 我的授权 -->
+  <view wx:if="{{sqButton==='mysq'}}" class="mysqcontent">
+    <view class="mysq_item" wx:for="123" wx:key="*this">
+      <image src="/images/icon.jpg" class="item_left_pic"></image>
+      <view class="mysq_info_box">
+        <view class="company">寿光新红农业种子批发有限责任公司</view>
+        <view class="area">地区：山东</view>
+        <view class="view_sqbook_box">
+          <navigator hover-class="none" class="view_sqbook" url="/pages/authorization/preview">
+            <image src="/images/view.png"></image>
+            <view class="view_sqbook">查看授权书</view>
+          </navigator>
+          <view class="cancle" bindtap="canclesq" data-index="{{index}}">取消授权</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 我要授权 -->
+  <block wx:else>
+    <view class="tosq_search_box">
+      <search searchValue="{{searchValue}}" fuzzyResultArr="{{fuzzyResultArr}}" bindinput="input" bindsearch="search"
+        bindfuzzyResultSearch="fuzzyResultSearch" bindclearFuzzyArr="clearFuzzyArr" />
+    </view>
+    <view class="tosqcontent">
+      <van-radio-group value="{{ radioShape }}" bind:change="onChangeradio">
+        <van-radio name="{{index}}" custom-class="demo-radio" checked-color="#48d68a" wx:for="12" wx:key="*this">
+          <view class="mysq_item">
+            <image src="/images/icon.jpg" class="item_left_pic"></image>
+            <view class="mysq_info_box">
+              <view class="company">寿光新红农业种子批发有限责任公司</view>
+              <view class="area">地区：山东</view>
+            </view>
+          </view>
+        </van-radio>
+      </van-radio-group>
+      <view class="to_button_box">
+        <van-button color="#56d679" block bindtap="sureAuthority">确定授权</van-button>
+      </view>
+    </view>
+  </block>
+  <!-- 确认弹窗 -->
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <van-dialog id="van-dialog" />
+  <van-toast id="van-toast" />
+</scroll-view>

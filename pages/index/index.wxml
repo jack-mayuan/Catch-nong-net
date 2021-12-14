@@ -1,0 +1,169 @@
+<!--pages/index/index.wxml-->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <!-- 轮播图 -->
+  <view class="top_image">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}" indicator-color="white"
+      indicator-active-color="lightgray">
+      <block wx:for="{{carouselArray}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="top_image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 六个状态，品种展示，现场会，供需，实验示范，品种登记，供应链 -->
+  <view class="body">
+    <view class="body_content">
+      <view class="row">
+        <view class="function" bindtap="toMore" data-type="{{type}}" data-identifier="品种展示" hover-class="function_hover" hover-start-time="{{20}}"
+          hover-stay-time="{{70}}">
+          <image src="/images/pinzhong.png"></image>
+          <view>品种展示</view>
+        </view>
+        <view class="function" bindtap="toMore" data-type="{{type}}" data-identifier="现场会" hover-class="function_hover" hover-start-time="{{20}}"
+          hover-stay-time="{{70}}">
+          <image src="/images/xianchangfuwu.png"></image>
+          <view>现场会</view>
+        </view>
+        <view class="function" bindtap="toMore" data-type="{{type}}" data-identifier="供需" hover-class="function_hover" hover-start-time="{{20}}"
+          hover-stay-time="{{70}}">
+          <image src="/images/gongxu.png" class="gongxu"></image>
+          <view>供需</view>
+        </view>
+      </view>
+      <view class="row">
+        <view class="function" bindtap="toMore" data-type="{{type}}" data-identifier="实验示范" hover-class="function_hover" hover-start-time="{{20}}"
+          hover-stay-time="{{70}}">
+          <image src="/images/shiyan.png"></image>
+          <view>实验示范</view>
+        </view>
+        <view class="function" bindtap="toMore" data-type="{{type}}" data-identifier="品种登记" hover-class="function_hover" hover-start-time="{{20}}"
+          hover-stay-time="{{70}}">
+          <image src="/images/dengji.png"></image>
+          <view>品种登记</view>
+        </view>
+        <view class="function" bindtap="toMore" data-type="{{type}}" data-identifier="供应链" hover-class="function_hover" hover-start-time="{{20}}"
+          hover-stay-time="{{70}}">
+          <image src="/images/gongyinglianguanli.png"></image>
+          <view>供应链</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 宣传展示，图文信息 -->
+  <view class="video_pic">
+    <view class="video {{type ==='video'? '': 'pic'}}" bindtap="clickAdvertise" hover-class="video_hover"
+      hover-start-time="{{0}}" hover-stay-time="{{100}}">
+      <image wx:if="{{type ==='video'}}" src="/images/sp2.png" class="video_icon"></image>
+      <image wx:else src="/images/sp1.png" class="video_icon"></image>
+      <view class="video_text">宣传展示</view>
+    </view>
+
+    <view class="pic {{type ==='picture'? 'select_pic_video': ''}}" bindtap="clickPicText" hover-class="pic_hover"
+      hover-start-time="{{0}}" hover-stay-time="{{100}}">
+      <image wx:if="{{type ==='picture'}}" src="/images/tw2.png" class="pic_icon"></image>
+      <image wx:else src="/images/tw1.png" class="pic_icon"></image>
+      <view class="pic_text">图文信息</view>
+    </view>
+  </view>
+  
+  <!-- 视频的布局 -->
+  <block wx:if="{{type ==='video'}}">
+    <view class="list_disp">
+      <view class="list_box">
+        <view class="vertical"></view>
+        <view>展示列表</view>
+      </view>
+      <view class="more" bindtap="moreVideo">更多>></view>
+    </view>
+    <view class="video_box">
+      <!-- 一个个的视频 -->
+      <view class="video_item" wx:for="{{videoList}}" wx:key="index">
+        <view class="video_text_box">
+          <view class="phote_box">
+            <!-- 左侧头像栏 -->
+            <image src="/images/icon.jpg" class="photo"></image>
+          </view>
+          <view class="box_border">
+            <view class="role_box">
+              <view class="nickname">昵称昵称昵称昵称</view>
+              <text class="role1 role">供应链</text>
+              <text class="role2 role">经理</text>
+            </view>
+            <view class="company_box">
+              <view class="company">寿光新红农业种子批发有限责任公司</view>
+            </view>
+            <view class="text">
+              <view class="{{item.isunfold?'':'fold'}} fold_inline">
+                {{item.content}}<text
+                  wx:if="{{item.isunfold && item.content.length>16}}" class="tool left20" bindtap="unfold" data-index="{{index}}">收起</text>
+              </view>
+              <text wx:if="{{!item.isunfold && item.content.length>16}}" class="tool" bindtap="unfold" data-index="{{index}}">展示</text>
+            </view>
+          </view>
+        </view>
+        <video id="video-{{item.uid}}" class="video" title="{{item.title}}" object-fit="fill" enable-danmu
+          bindpause="pause" bindplay="bindplay" bindended="bindended" data-index="{{index}}" poster="{{item.cover}}"
+          src="{{item.resource}}">
+          <view class="bc" wx:if="{{item.show}}" bindtap="clickTitle">
+            <view class="title">{{item.title}}</view>
+          </view>
+        </video>
+        <view class="time_distance">2021-11-22 10:10:30</view>
+      </view>
+    </view>
+  </block>
+  <!-- 图文的布局 -->
+  <block wx:else>
+    <view class="list_disp">
+      <view class="list_box">
+        <view class="vertical"></view>
+        <view>展示列表</view>
+      </view>
+      <view class="more" bindtap="morePic">更多>></view>
+    </view>
+    <view class="pic_box">
+      <view class="pic_item" wx:for="{{picList}}" wx:key="index" wx:for-index="fatherindex">
+        <view class="phote_box">
+          <!-- 左侧头像栏 -->
+          <image src="/images/icon.jpg" class="photo"></image>
+        </view>
+        <view class="pic_text_box">
+          <view class="role_box">
+            <view class="nickname">昵称昵称昵称昵称</view>
+            <text class="role1 role">供应链</text>
+            <text class="role2 role">经理</text>
+          </view>
+          <view class="company_box">
+            <view class="company">寿光新红农业种子批发有限责任公司</view>
+          </view>
+          <view class="text">
+            <view class="{{item.isunfold?'':'fold'}} fold_inline">
+            {{item.content}}
+              <text
+                wx:if="{{item.isunfold && item.content.length>17}}" class="tool left20" bindtap="picunfold" data-index="{{fatherindex}}">收起</text>
+            </view>
+            <text wx:if="{{!item.isunfold && item.content.length>17}}" class="tool" bindtap="picunfold" data-index="{{fatherindex}}">展示</text>
+          </view>
+          <view class="pic_box_inner">
+            <view wx:for="{{item.imageArray}}" wx:key="id" class="pic {{(index+1)%3 === 0?'pic_last_collom': ''}}">
+              <image src="{{item.url}}" class="picture" bindtap="onPreviewImage" data-index="{{index}}"
+                data-fatherindex="{{fatherindex}}"></image>
+            </view>
+          </view>
+          <view class="time_distance">2021-11-22 10:10:30</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <view class="block" />
+  <van-toast id="van-toast" />
+</scroll-view>

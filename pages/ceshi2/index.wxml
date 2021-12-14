@@ -1,0 +1,12 @@
+<!--pages/ceshi2/index.wxml-->
+
+<view class="search_box">
+<search searchValue="{{searchValue}}" fuzzyResultArr="{{fuzzyResultArr}}" bindinput="input" bindsearch="search"
+  bindfuzzyResultSearch="fuzzyResultSearch" bindclearFuzzyArr="clearFuzzyArr" />
+</view>
+
+<van-toast id="van-toast" />
+<!-- searchValue -->
+<!-- input -->
+<!-- search -->
+<!-- fuzzyResultSearch -->

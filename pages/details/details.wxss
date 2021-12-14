@@ -1,0 +1,86 @@
+/* pages/details/details.wxss */
+.container{
+  background-color: #f5f7f6;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.header{
+  background-color: #56d679;
+  height: 75rpx;
+  color: white;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 75rpx;
+}
+.body{
+  padding: 29rpx 24rpx 24rpx;
+}
+/* 标题部分 */
+.body .title_box{
+  padding: 42rpx 32rpx 24rpx 42rpx;
+  background-color: #fff;
+}
+.body .title_box .title_inner_box{
+  min-height: 167rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+.body .title_box .title_inner_box .title{
+  line-height: 46rpx;
+  font-weight: 600;
+  padding-bottom: 48rpx;
+}
+.body .title_box .title_inner_box .company{
+  height: 28rpx;
+  display: flex;
+  flex-direction: flex-start;
+  align-items: center;
+}
+.body .title_box .title_inner_box .company image{
+  height: 28rpx;
+  width: 28rpx;
+  border-radius: 14rpx;
+}
+.body .title_box .title_inner_box .company .com_name{
+  font-size: 24rpx;
+  color: #55d679;
+  padding-left: 14rpx;
+}
+/* 发布时间部分 */
+.body .time{
+  height: 54rpx;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 26rpx;
+  color: #5c5c5c;
+}
+/* 正文部分 */
+.body .article{
+  background-color: #fff;
+  padding: 44rpx 46rpx 20rpx ;
+  min-height: 1022rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #838080;
+}
+.body .article image{
+  width: 100%;
+  height: 322rpx;
+}
+.body .article .image_title{
+  height: 61rpx;
+  line-height: 61rpx;
+  text-align: center;
+  margin-bottom: 26rpx;
+  font-weight: 600;
+  color: #555353;
+}
+.body .article .text{
+  line-height: 46rpx;
+}
+.body .article .text .p{
+  text-indent: 2em;
+}

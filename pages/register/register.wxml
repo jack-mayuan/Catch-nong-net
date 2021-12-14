@@ -1,0 +1,77 @@
+<!--pages/protocol/protocol_name.wxml-->
+<view class="container">
+  <!-- <image src="{{userInfo.avatarUrl}}" mode="10" class="image_style"></image> -->
+  <image src="{{userInfo.avatarUrl}}" mode="10" class="image_style"></image>
+  <!-- 角色选择 -->
+  <view id="select">
+    <view class="label">一级角色选择</view>
+    <van-dropdown-menu active-color="#56d679">
+      <van-dropdown-item model:value="{{ value1 }}" options="{{ option1 }}" title="{{role1}}"
+        bind:change="changeRole" />
+    </van-dropdown-menu>
+  </view>
+  <!-- 当一级角色选择为供应链的时候，需要做二次选择 -->
+  <block wx:if="{{value1 === 0}}">
+    <view id="select">
+      <view class="label">供应链子级</view>
+      <van-dropdown-menu active-color="#56d679">
+        <van-dropdown-item model:value="{{ value3 }}" options="{{ option3 }}" title="{{role3}}"
+          bind:change="supplyChain" />
+      </van-dropdown-menu>
+    </view>
+  </block>
+  <!-- 二级角色选择 -->
+  <view id="select">
+    <view class="label">二级角色选择</view>
+    <van-dropdown-menu active-color="#56d679">
+      <van-dropdown-item model:value="{{ value2 }}" options="{{ option2 }}" title="{{role2}}"
+        bind:change="changeRole2" />
+    </van-dropdown-menu>
+  </view>
+
+  <!-- 电话号码 -->
+  <van-field model:value="{{phone.value}}" label="电话" type="textarea" placeholder="请输入您的手机号码" rows="1" autosize
+    border="{{ false }}" error-message="{{phone.errMsg}}" bind:blur="phoneBlur" required bind:change="phoneChange" />
+  <!-- 地址 -->
+  <van-field model:value="{{address.value}}" label="地址" type="textarea" placeholder="请输入地址" rows="1" autosize
+    border="{{ false }}" required error-message="{{address.errMsg}}" bind:blur="addressBlur"
+    bind:change="addressChange" />
+
+  <!-- 选择代办时一些没有的选项 -->
+  <block wx:if="{{value1 !== 3}}">
+    <!-- 公司名称 -->
+    <view class="company_box">
+      <van-field model:value="{{company.value}}" label="公司名称" type="textarea" placeholder="请输入公司名称" rows="1" autosize
+        required bind:input="companyInput" error-message="{{company.errMsg}}" border="{{ false }}" />
+      <!-- 模糊查找结果 -->
+      <view class="fuzzy_search">
+        <view wx:for="{{fuzzyResultArr}}" wx:key="index" class="fuzzy_item" hover-class="fuzzy_hover"
+          hover-start-time="{{0}}" hover-stay-time="{{100}}" data-value="{{item}}" bindtap="fuzzyResultSearch">{{item}}
+        </view>
+      </view>
+    </view>
+    <!-- 上传公司logo -->
+    <view class="puload_head">
+      <view class="label">公司logo</view>
+      <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="delete"
+        bind:click-preview="clickPreview" max-count="1" />
+    </view>
+    <!-- 营业执照 -->
+    <view class="puload_head">
+      <view class="label">营业执照</view>
+      <van-uploader file-list="{{ fileList2 }}" bind:after-read="afterRead2" bind:delete="delete2" name="2"
+        max-count="1" />
+    </view>
+  </block>
+  <!-- 代理品种 -->
+  <van-field model:value="{{variety.value}}" label="代理品种" type="textarea" placeholder="请输入代理品种" rows="1" autosize
+    border="{{ false }}" bind:change="varietyChange" />
+  <!-- error-message="{{variety.errMsg}}" bind:blur="varietyBlur" -->
+  <!-- 注册按钮 -->
+  <view class="register_box">
+    <van-button type="primary" size="normal" block custom-class="demo-margin-bottom register" bindtap="register">注册账号
+    </van-button>
+  </view>
+  <van-toast id="van-toast" />
+</view>
+<view class="mask" bindtap="clearFuzzyArr" wx:if="{{fuzzyResultArr.length!== 0}}"></view>

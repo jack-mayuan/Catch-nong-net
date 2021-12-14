@@ -1,0 +1,53 @@
+<!--pages/companyList/index.wxml-->
+<!-- <text>pages/companyList/index.wxml</text> -->
+<view class="container">
+  <!-- <title-bar title="公司详情"></title-bar> -->
+  <view class="content">
+    <view class="comp_header">
+      <view class="logo">
+        <image src="/images/icon.jpg"></image>
+      </view>
+      <view class="comp_title">
+        <view class="comp_name">维科软件工程有限责任公司</view>
+        <view class="comp_tag">
+          <text class="tag-item green">开业</text>
+          <text class="tag-item lightgreen">A级纳税人(2020)</text>
+          <text class="tag-item tag-more blue">高新技术企业(2020)</text>
+        </view>
+      </view>
+    </view>
+    <view class="comp_info">
+      <view class="info-item">
+        <view class="info-key">法定代表人</view>
+        <view class="info-value">安继业</view>
+      </view>
+      <view class="info-item">
+        <view class="info-key">注册资本</view>
+        <view class="info-value">150万(元)</view>
+      </view>
+      <view class="info-item last_item">
+        <view class="info-key">成立日期</view>
+        <view class="info-value">1996-08-08</view>
+      </view>
+    </view>
+    <view class="comp_moreinfo_box">
+      <view class="comp_moreinfo">
+        <view class="phone_box item">
+          <image src="/images/dianhua.png"></image>
+          <view class="phone">17852866217</view>
+        </view>
+        <view class="area_box item">
+          <image src="/images/dizhi.png"></image>
+          <view class="area">杭州市余杭区五常街道文一西路998号4幢812室</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="content2">
+  <view class="brief_box">
+    <text class="brief">---------公司简介---------</text>
+    <text
+      class="intro">杭州维科软件工程有限责任公司成立于1996年08月08日，注册地位于杭州市余杭区五常街道文一西路998号4幢812室，法定代表人为安继业。经营范围包括生产：计算机软件,第二类6870软件技术开发、技术咨询、技术服务、成果转让：计算机软件，医疗仪器及相关信息产品；设计、安装：电子计算机系统工程；批发、零售：电子计算机及配件，计算机软件，办公自动化设备，仪器仪表及自身开发的产品；货物进出口（法律、行政法规禁止经营的项目除外，法律、行政法规限制经营的项目取得许可后方可经营）；其他无需报经审批的一切合法项目杭州维科软件工程有限责任公司对外投资1家公司。</text>
+  </view>
+  </view>
+</view>

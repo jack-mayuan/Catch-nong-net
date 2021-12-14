@@ -1,0 +1,44 @@
+<!--pages/searchDetails/index.wxml-->
+<view class="container">
+  <block wx:if="{{type === 'video'}}">
+    <view class="video_box">
+      <view class="video_item" wx:for="{{videoList}}" wx:key="uid">
+        <video id="myVideo" class="video" title="{{item.title}}" object-fit="fill" enable-danmu bindpause="pause"
+          bindplay="bindplay" bindended="bindended" data-index="{{index}}" poster="{{item.cover}}"
+          src="{{item.resource}}">
+          <view class="bc" wx:if="{{item.show}}" bindtap="bindplay">
+            <view class="title">{{item.title}}</view>
+          </view>
+        </video>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <swiper indicator-dots indicator-active-color="lightgray" autoplay interval="{{3000}}" duration="{{500}}"
+      class="swiper_image">
+      <swiper-item wx:for="{{arr}}" wx:key="*this">
+        <image src="{{item}}" mode="aspectFit" style="width:750rpx;height:600rpx;" />
+      </swiper-item>
+    </swiper>
+  </block>
+  <view class="title_box">
+    <view class="title">寿光新红农业种子公司培养出来的粉果一号</view>
+    <view class="info">
+      <view class="rolename">
+        <image src="/images/jiaose.png"></image>
+        <text>经理</text>
+      </view>
+      <view class="time">
+        <image src="/images/shijian.png"></image>
+        <text>2020-10-20</text>
+      </view>
+    </view>
+  </view>
+  <view class="content_box">
+    <view class="title">————公司详情————</view>
+    <view class="text">
+      杭州维科软件工程有限责任公司成立于1996年08月08日，注册地位于杭州市余杭区五常街道文一西路998号4幢812室，法定代表人为安继业。经营范围包括生产：计算机软件,第二类6870软件
+      技术开发、技术咨询、技术服务、成果转让：计算机软件，医疗仪器及相关信息产品；设计、安装：电子计算机系统工程；批发、零售：电子计算机及配件，计算机软件，办公自动化设备，仪器仪表及自身开发的产品；货物进出口（法律、行政法规禁止经营的项目除外，法律、行政法规限制经营的项目取得许可后方可经营）；其他无需报经审批的一切合法项目杭州维科软件工程有限责任公司对外投资1家公司。
+    </view>
+  </view>
+</view>

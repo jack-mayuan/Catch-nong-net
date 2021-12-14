@@ -1,0 +1,18 @@
+<!--components/search/index.wxml-->
+<view class="search_box">
+  <view class="search">
+    <input class="input" type="text" placeholder="请输入关键字进行搜索" value="{{searchValue}}" bindinput="input" />
+    <view class="search_btn_box" bindtap="search">
+      <view class="search_btn" hover-class="hover_class" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+        <van-icon name="search" color="white" size="60rpx" />
+      </view>
+    </view>
+  </view>
+  <!-- 模糊查找结果 -->
+  <view class="fuzzy_search">
+    <view wx:for="{{fuzzyResultArr}}" wx:key="index" class="fuzzy_item" hover-class="fuzzy_hover"
+      hover-start-time="{{0}}" hover-stay-time="{{100}}" data-index="{{index}}" bindtap="fuzzyResultSearch">{{item}}
+    </view>
+  </view>
+</view>
+<view class="mask" bindtap="clearFuzzyArr" wx:if="{{fuzzyResultArr.length!== 0}}"></view>

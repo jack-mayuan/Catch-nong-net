@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "title-bar": "../../components/title-bar/index"
+  },
+  "navigationBarTitleText": "名片夹管理"
+}

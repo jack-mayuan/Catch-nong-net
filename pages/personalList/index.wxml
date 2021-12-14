@@ -1,0 +1,25 @@
+<!--pages/personalList/index.wxml-->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <!-- <title-bar title="人员列表">
+    <image slot="before" src="/images/peopleList.png" class="title_pic"></image>
+  </title-bar> -->
+  <view class="content">
+    <view class="people_info" wx:for="abcdedgad" wx:key="*this">
+      <image src="/images/icon.jpg"></image>
+      <view class="people_detail">
+        <view class="name">姓名：张三</view>
+        <view class="job">职位：老板</view>
+        <view class="register_time">注册时间: 2021-10-20</view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <van-toast id="van-toast" />
+</scroll-view>

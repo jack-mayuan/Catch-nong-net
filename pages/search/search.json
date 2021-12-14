@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "search": "../../components/search/index",
+    "video-item": "../../components/video-item/index",
+    "picture-item": "../../components/picture-item/index",
+    "article-item": "../../components/article-item/index"
+  },
+  "navigationBarTitleText": "检索"
+}

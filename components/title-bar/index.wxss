@@ -1,0 +1,18 @@
+/* components/title-bar/index.wxss */
+/* 顶部我要发布标题 */
+.toPublic {
+  display: flex;
+  height: 76rpx;
+  width: 750rpx;
+  font-size: 26rpx;
+  background-color: #56d679;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.toPublic image {
+  width: 46rpx;
+  height: 46rpx;
+  margin-right: 23rpx;
+}

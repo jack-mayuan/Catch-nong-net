@@ -1,0 +1,17 @@
+<!--pages/my/myHonesty.wxml-->
+<view class="container">
+  <!-- <title-bar title="我的诚信度">
+    <image slot="before" src="/images/cxtop.png"></image>
+  </title-bar> -->
+  <view class="star_box">
+    <image src="/images/star.png" wx:for="{{yellowHartArray}}" wx:key="index"></image>
+    <image src="/images/star_gray.png" wx:for="{{grayHartArray}}" wx:key="index"></image>
+  </view>
+  <view class="integrity">
+    <image src="/images/chengicon.png"></image>
+    <view>我的诚信度</view>
+  </view>
+</view>
+
+
+

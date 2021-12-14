@@ -1,0 +1,64 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="personal_msg">
+      <image src="{{userInfo.avatarUrl}}" bindtap="toAuthorization"></image>
+      <view>xx种苗有限公司</view>
+      <view class="role">
+        <view>张三</view>
+        <view class="two_role">经理</view>
+      </view>
+    </view>
+    <!-- 中间框 -->
+    <view class="box">
+      <view class="box_inner" bindtap="tocomplaint" hover-class="box_inner_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+        <image src="/images/jy.png"></image>
+        <view>投诉建议</view>
+      </view>
+      <view class="box_inner" bindtap="toauthorization" hover-class="box_inner_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+        <image src="/images/authorization.png"></image>
+        <view>我要授权</view>
+      </view>
+      <view class="box_inner" bindtap="publish" hover-class="box_inner_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+        <image src="/images/fabu.png"></image>
+        <view>我要发布</view>
+      </view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="body_content">
+      <view class="row">
+        <view class="function" bindtap="tonameCardHold" hover-class="function_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+          <image src="/images/mpj.png"></image>
+          <view>名片夹管理</view>
+        </view>
+        <view class="function" bindtap="tomystrength" hover-class="function_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+          <image src="/images/shili.png"></image>
+          <view>我的实力</view>
+        </view>
+        <view class="function" bindtap="tomyHonesty" hover-class="function_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+          <image src="/images/cxd.png"></image>
+          <view>我的诚信度</view>
+        </view>
+        <view class="function" bindtap="tochangeInfo" hover-class="function_hover" hover-start-time="{{0}}" hover-stay-time="{{100}}">
+          <image src="/images/edit.png"></image>
+          <view>修改信息</view>
+        </view>
+      </view>
+      <view class="row"></view>
+    </view>
+  </view>
+  <!-- 我要发布弹窗，选择发布图文还是发布视频 -->
+  <van-popup show="{{ publishShow }}" round position="bottom" custom-style="height: 20%" bind:close="hidePublish">
+    <view class="popup_inner">
+      <navigator url="/pages/publish/publish?type=picture" bindtap="topublishPicture">
+        <view class="top_view" hover-class="hover_public" hover-start-time="0" hover-stay-time="100">发布图文</view>
+      </navigator>
+      <navigator url="/pages/publish/publish?type=video" bindtap="topublishPicture">
+        <view class="bottom_view" hover-class="hover_public" hover-start-time="0" hover-stay-time="100">发布视频</view>
+      </navigator>
+    </view>
+  </van-popup>
+
+
+</view>

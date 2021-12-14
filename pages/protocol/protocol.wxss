@@ -1,0 +1,70 @@
+/* pages/register/register.wxss */
+.container {
+  padding: 20rpx 20rpx 20rpx;
+  height: auto;
+  box-sizing: border-box;
+  background-color: rgb(248, 246, 246);
+  /* background-color: rgb(53, 50, 50); */
+}
+
+.container .reminder {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+
+/* 白背景 */
+.container .container_inner {
+  background-color: white;
+  padding: 10rpx;
+  height: auto;
+  box-sizing: border-box;
+  color: rgb(105, 110, 114);
+}
+
+/* 白背景边框 */
+.container .container_inner .inner_border {
+  border: 1rpx solid rgb(238, 234, 234);
+  padding: 0 10rpx;
+  height: 100%;
+  overflow: scroll;
+}
+
+/* 内容文本 */
+.inner_border .title {
+  text-align: center;
+  color: black;
+  margin-bottom: 10rpx;
+}
+
+.inner_border .content .p {
+  text-indent: 2em;
+  font-size: 24rpx;
+  line-height: 38rpx;
+  margin-bottom: 6rpx;
+}
+
+/* 阅读协议并且同意 */
+.button_box {
+  min-height: 180rpx;
+  box-sizing: border-box;
+}
+
+.button_box .switch {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  text-align: center;
+  color: rgb(105, 110, 114);
+}
+
+.button_box .switch .protocol_box {
+  display: inline;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+
+.protocol_box .protocol {
+  /* color: rgb(29, 191, 255); */
+  color: rgb(105, 110, 114);
+}
+

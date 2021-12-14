@@ -1,0 +1,166 @@
+/* pages/companyList/index.wxss */
+.container {
+  min-height: 100vh;
+  background-color: #f5f7f6;
+}
+
+.content {
+  padding: 38rpx 0 27rpx;
+  background-color: #fff;
+  border-radius: 0 0 22rpx 22rpx;
+}
+
+.comp_header {
+  display: flex;
+  padding: 0 31rpx;
+  margin-bottom: 40rpx;
+}
+
+.comp_header .logo {
+  width: 109rpx;
+  height: 109rpx;
+}
+
+.comp_header .logo image {
+  width: 109rpx;
+  height: 109rpx;
+}
+
+.comp_header .comp_title {
+  margin-left: 12rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.comp_header .comp_title .comp_name {
+  width: 100%;
+  font-weight: 700;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.comp_header .comp_title .comp_tag {
+  font-size: 24rpx;
+  margin: 30rpx 0 10rpx;
+}
+
+.comp_header .comp_title .comp_tag .tag-item {
+  display: inline-block;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  font-weight: normal;
+  border-radius: 4rpx;
+  margin: 0 15rpx 9rpx 0;
+  padding: 0 5rpx 0;
+}
+
+.comp_header .comp_title .comp_tag .green {
+  color: #1ea830;
+  background: rgba(30, 168, 48, 0.09);
+}
+
+.comp_header .comp_title .comp_tag .lightgreen {
+  color: #26afcf;
+  background: rgba(38, 175, 207, 0.09);
+}
+
+.comp_header .comp_title .comp_tag .blue {
+  color: #2972fa;
+  background: rgba(41, 152, 250, 0.09);
+}
+
+.comp_info {
+  display: flex;
+
+}
+
+.comp_info .info-item {
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  border-right: 1rpx solid #e8e8e8;
+  font-size: 28rpx;
+}
+
+.comp_info .info-item .info-key {
+  color: #858585;
+}
+
+.comp_info .info-item .info-value {
+  color: #1f1f1f;
+  margin-top: 16rpx;
+}
+
+.comp_moreinfo_box {
+  padding: 4.34783vw 31rpx 0;
+}
+
+.comp_moreinfo_box .comp_moreinfo {
+  padding: 3.62319vw 2.89855vw 3.1401vw;
+  overflow: hidden;
+  color: #555;
+  font-size: 3.38164vw;
+  line-height: 3.38164vw;
+  border-radius: 0.96618vw;
+  box-shadow: 0px 1px 1.20773vw 2px #edf0f7;
+}
+
+.comp_moreinfo_box .comp_moreinfo .item {
+  display: flex;
+  align-items: flex-start;
+  line-height: 40rpx;
+}
+
+.comp_moreinfo_box .comp_moreinfo .item image {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+
+.comp_moreinfo_box .comp_moreinfo .phone_box .phone {
+  color: #2972FA;
+}
+
+.comp_moreinfo_box .comp_moreinfo .area_box {
+  padding-top: 20rpx;
+}
+
+.comp_moreinfo_box .comp_moreinfo .area_box .area {
+  color: #1f1f1f;
+  flex: 1;
+}
+
+/* 下面简介部分 */
+.content2 {
+  margin-top: 20rpx;
+  padding: 38rpx 31rpx 27rpx;
+  background-color: #fff;
+  border-radius: 22rpx 22rpx 0 0;
+  color: #1f1f1f;
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+
+.brief_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content2 .brief {
+  color: #858585;
+  padding-bottom: 20rpx;
+}
+
+.content2 .intro {
+  color: #858585;
+  text-indent: 2em;
+}

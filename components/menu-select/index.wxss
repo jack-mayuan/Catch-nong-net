@@ -1,0 +1,102 @@
+/* 所属角色 */
+.role {
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #e5e5e5;
+  padding: 0 34rpx 0 23rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25rpx;
+  margin-top: 34rpx;
+  background-color: #fff;
+}
+
+.role .placeHolder {
+  color: #838383;
+  font-size: 26rpx;
+}
+
+.role .selected {
+  color: black;
+}
+
+.role image {
+  width: 25rpx;
+  height: 25rpx;
+  transition-duration: 0.3s;
+}
+
+.role .up {
+  transform: rotate(-180deg);
+  transition-duration: 0.3s;
+}
+
+.role_box {
+  position: relative;
+  /* z-index: 100; */
+}
+
+.role_box .border_bottom {
+  border-bottom: 0;
+}
+
+/* 不是选择的时候，超出隐藏起来 */
+.role_box_outer {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.role_item_box {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  overflow-y: scroll;
+}
+
+.role_item_box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.role_box .none {
+  max-height: 0rpx;
+  transition-duration: 0.3s;
+}
+
+.role_box .display {
+  max-height: 500rpx;
+  transition-duration: 0.3s;
+}
+
+.role_item {
+  height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 23rpx;
+  font-size: 25rpx;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin: 0 2rpx;
+  background-color: #fff;
+}
+
+.role_item image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* 遮罩层 */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+}

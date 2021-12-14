@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title-bar": "../../components/title-bar/index",
+    "search": "../../components/search/index"
+  },
+  "navigationBarTitleText": "我要授权"
+}

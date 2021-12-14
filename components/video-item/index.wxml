@@ -1,0 +1,33 @@
+<!--components/video-item/index.wxml-->
+<view class="video_item">
+  <view class="video_text_box">
+    <view class="phote_box">
+      <!-- 左侧头像栏 -->
+      <image src="/images/icon.jpg" class="photo"></image>
+    </view>
+    <view>
+      <view class="role_box">
+        <view class="nickname">昵称昵称昵称昵称</view>
+        <text class="role1 role">供应链</text>
+        <text class="role2 role">经理</text>
+      </view>
+      <view class="company_box">
+        <view class="company">寿光新红农业种子批发有限责任公司</view>
+      </view>
+      <view class="text">
+        <view class="{{item.isunfold?'':'fold'}} fold_inline">
+          {{item.content}}<text wx:if="{{item.isunfold && item.content.length >18}}" class="tool left20"
+            bindtap="unfold">收起</text>
+        </view>
+        <text wx:if="{{!item.isunfold && item.content.length > 18}}" class="tool" bindtap="unfold">展示</text>
+      </view>
+    </view>
+  </view>
+  <video id="video-{{item.uid}}" class="video" title="{{item.title}}" object-fit="fill" enable-danmu bindpause="pause"
+    bindplay="bindplay" bindended="pause" data-index="{{index}}" poster="{{item.cover}}" src="{{item.resource}}">
+    <view class="bc" wx:if="{{item.show}}">
+      <view class="title">{{item.title}}</view>
+    </view>
+  </video>
+  <view class="time_distance">2021-11-22 10:10:30</view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/authorization/editauth.wxml-->
+<!-- <text>pages/authorization/editauth.wxml</text> -->
+<view class="container">
+  <!-- <title-bar title="我要授权">
+    <image slot="before" src="/images/sqtopicon.png" class="image"></image>
+  </title-bar> -->
+  <view class="authorize_box">
+    <view class="authorize">
+      <image src="/images/sqsbg.jpg" class="auth_image"></image>
+      <view class="auth_content">
+        <view class="title">品种授权书</view>
+        <view class="content_text">现授予给
+        <text class="underline">寿光新红种子农业批发有限责任公司</text>，授权品种为
+        <input value="{{variety}}" bindinput="bindKeyInput" class="variety" placeholder="请输入品种"/>
+        </view>
+        <view class="date">授权日期:{{year}}年{{month}}月{{day}}日</view>
+      </view>
+    </view>
+  </view>
+  <view class="button_box">
+    <van-button block color="#f98538" bindtap="save">保存</van-button>
+    <!-- <view class="margin_top">
+      <van-button block color="#56d679">预览</van-button>
+    </view> -->
+  </view>
+  <van-toast id="van-toast" />
+</view>

@@ -1,0 +1,119 @@
+/* pages/protocol/protocol_name.wxss */
+.container {
+  padding: 0 20rpx 40rpx;
+  color: #646566;
+}
+
+.image_style {
+  height: 100rpx;
+  width: 100rpx;
+  margin: 0rpx 30rpx;
+}
+/* 公司名 */
+.company_box{
+  max-height: 1000rpx;
+  position: relative;
+}
+.company_box .fuzzy_search{
+  position: absolute;
+  z-index: 100;
+  width: 682rpx;
+  background-color: #fff;
+}
+.company_box .fuzzy_search .fuzzy_item{
+  color: #979797;
+  padding-left: 30rpx;
+  line-height: 60rpx;
+  /* border-bottom: 1rpx solid #f1ecec; */
+  background-color: rgb(248, 247, 247);
+}
+.company_box .fuzzy_search .fuzzy_hover{
+  background-color: lightgray;
+}
+/* 遮罩层 */
+.mask{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #ffffff;
+  opacity: 0;
+  /* background-color: rgb(131, 100, 100); */
+}
+/* -------------------- */
+
+
+/* 角色选择 */
+#select {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  position: relative;
+}
+
+#select .label {
+  color: #646566;
+  width: 91px;
+  padding-left: 30rpx;
+}
+#select .label:before {
+  color: var(--cell-required-color,#ee0a24);
+  content: "*";
+  font-size: var(--cell-font-size,14px);
+  left: var(--padding-xs,16rpx);
+  position: absolute;
+}
+#select .van-ellipsis {
+  /* 请选择一级角色字样的大小 */
+  font-size: 30rpx;
+}
+.van-field__label{
+  font-size: 32rpx;
+}
+.van-field__control{
+  font-size: 30rpx;
+}
+#select .van-dropdown-item__title{
+  /* 控制van-dropdown-item弹出框的字体的位置 */
+  /* padding-left: 194rpx; */
+}
+#select .van-dropdown-menu {
+  box-shadow: 0 0 0 0;
+}
+
+
+.input_height {
+  height: 80rpx;
+}
+.register_box{
+  padding: 0 30rpx;
+  margin-top: 50rpx;
+}
+
+.register {
+  margin-top: 10rpx;
+}
+.puload_head{
+  display: flex;
+  align-items: center;
+}
+.puload_head .label{
+  width: 198rpx;
+  padding-left: 30rpx;
+}
+.puload_head .label:before {
+  color: var(--cell-required-color,#ee0a24);
+  content: "*";
+  font-size: var(--cell-font-size,14px);
+  left: var(--padding-xs,37rpx);
+  position: absolute;
+}
+.field-index--van-field,van-cell{
+  border: 0 !important;
+}
+/* , .van-cell, .van-cell--required, .van-cell--borderless */
+/* .van-cell--borderless{
+  border: 1rpx white solid;
+} */

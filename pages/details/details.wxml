@@ -1,0 +1,31 @@
+<!--pages/details/details.wxml-->
+<view class="container">
+  <!-- <view class="header">详情页</view> -->
+  <view class="body">
+    <view class="title_box">
+      <view class="title_inner_box">
+        <view class="title">打造品牌强农的“山东样板”--山东品牌农业的创新实践路径</view>
+        <view class="company">
+          <image src="/images/icon.jpg"></image>
+          <view class="com_name">寿光新红农业技术有限公司</view>
+        </view>
+      </view>
+    </view>
+    <view class="time">
+      <view>发布时间：2021-00-00</view>
+      <view>发布人: 茂</view>
+      <view>阅读: 105</view>
+    </view>
+    <view class="article">
+      <image src="/images/icon.jpg"></image>
+      <view class="image_title">昌邑宏大生姜批发市场</view>
+      <view class="text">
+        <view class="p">
+          文字是人类用符号记录表达信息以传之久远的方式和工具。现代文字大多是记录语言的工具。人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。文字的不同体现了国家和民族的书面表达的方式和思维不同。文字使人类进入有历史记录的文明社会。
+        </view>
+        文字是人类用符号记录表达信息以传之久远的方式和工具。现代文字大多是记录语言的工具。人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。文字的不同体现了国家和民族的书面表达的方式和思维不同。文字使人类进入有历史记录的文明社会。
+        文字是人类用符号记录表达信息以传之久远的方式和工具。现代文字大多是记录语言的工具。人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。文字的不同体现了国家和民族的书面表达的方式和思维不同。文字使人类进入有历史记录的文明社会。
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/authorization/myAuthorization.wxml-->
+<scroll-view class="container" scroll-y refresher-enabled="{{true}}" refresher-threshold="{{100}}"
+  refresher-default-style="black" refresher-background="#f4f4f4" refresher-triggered="{{triggered}}"
+  bindrefresherrefresh="onRefresh" bindscrolltolower="scrollBottom">
+  <!-- <title-bar title="我的授权">
+    <image slot="before" src="/images/sqtopicon.png" class="image"></image>
+  </title-bar> -->
+  <view class="block" />
+  <!-- 我的授权 -->
+  <view class="mysqcontent">
+    <view class="mysq_item" wx:for="123" wx:key="*this">
+      <image src="/images/icon.jpg" class="item_left_pic"></image>
+      <view class="mysq_info_box">
+        <view class="company">寿光新红农业种子批发有限责任公司</view>
+        <view class="area">地区：山东</view>
+        <view class="view_sqbook_box">
+          <navigator hover-class="none" class="view_sqbook" url="/pages/authorization/preview">
+            <image src="/images/view.png"></image>
+            <view class="view_sqbook">查看授权书</view>
+          </navigator>
+          <view class="cancle" bindtap="canclesq" data-index="{{index}}">取消授权</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="loading" wx:if="{{isReachBottom}}">
+    <van-loading type="spinner" size="36rpx">加载中...</van-loading>
+  </view>
+  <view class="hint" wx:if="{{openhint}}">
+    {{hint}}
+  </view>
+  <van-dialog id="van-dialog" />
+  <van-toast id="van-toast" />
+</scroll-view>
