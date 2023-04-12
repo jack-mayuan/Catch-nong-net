@@ -72,6 +72,10 @@
     <van-button type="primary" size="normal" block custom-class="demo-margin-bottom register" bindtap="register">注册账号
     </van-button>
   </view>
+  <view class="register_box">
+    <van-button type="primary" size="normal" block custom-class="demo-margin-bottom register" bindtap="VisitorEntry">游客进入
+    </van-button>
+  </view>
   <van-toast id="van-toast" />
 </view>
 <view class="mask" bindtap="clearFuzzyArr" wx:if="{{fuzzyResultArr.length!== 0}}"></view>
