@@ -4,7 +4,9 @@
 # 如何运行
 
 1.拉取代码到本地
+
 2.导入微信小程序开发者工具，点击预览就可以看到运行的项目
+
 微信开发者工具下载地址：https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html
 
 # 技术栈
