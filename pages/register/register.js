@@ -398,6 +398,11 @@ Page({
       }
     }
   },
+  VisitorEntry  () {
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  },
   onLoad: function (options) {
     // console.log()
     this.setData({
